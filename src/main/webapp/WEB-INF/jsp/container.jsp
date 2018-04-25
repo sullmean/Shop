@@ -19,13 +19,10 @@
 				<div class="product-image-wrapper">
 					<div class="single-products">
 						<div class="productinfo text-center">
-							<img
-								src="${pageContext.request.contextPath}/resources/images/home/product1.jpg"
-								alt="" />
+							<img src="${pageContext.request.contextPath}/resources/images/home/product1.jpg" alt="" />
 							<h2> $ ${item.price} </h2>
 							<p> ${item.productName}</p>
-							<a href="#" class="btn btn-default add-to-cart"><i
-								class="fa fa-shopping-cart"></i>Add to cart</a>
+							<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 						</div>
 					</div>
 				</div>
@@ -36,7 +33,7 @@
 		<!--features_items-->
 
 <!-- 		<div class="category-tab"> -->
-<!-- 			<!--category-tab-->
+			<!--category-tab-->
 <!-- 			<div class="col-sm-12"> -->
 <!-- 				<ul class="nav nav-tabs"> -->
 <!-- 					<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li> -->
@@ -386,7 +383,7 @@
 		<!--/category-tab-->
 
 <!-- 		<div class="recommended_items"> -->
-<!-- 			<!--recommended_items--> -->
+			<!--recommended_items--> 
 <!-- 			<h2 class="title text-center">recommended items</h2> -->
 
 <!-- 			<div id="recommended-item-carousel" class="carousel slide" -->

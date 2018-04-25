@@ -1,10 +1,14 @@
 package shop.entities;
 // Generated Apr 21, 2018 4:25:32 PM by Hibernate Tools 5.2.8.Final
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -24,11 +28,11 @@ public class Product implements java.io.Serializable {
 	private long productId;
 	@Column(name = "decription")
 	private String decription;
-	@Column(name = "imageID")
-	private Long imageId;
+	@OneToMany(mappedBy="product")
+	private List<Image> listImage;
 	@Column(name = "productName")
 	private String productName;
-	@Column(name = "Price", precision = 10)
+	@Column(name = "price", precision = 10)
 	private Double price;
 	@OneToOne()
 	@JoinColumn(name = "category")
@@ -39,15 +43,12 @@ public class Product implements java.io.Serializable {
 	public Product() {
 	}
 
-	public Product(long productId) {
-		this.productId = productId;
-	}
 
-	public Product(long productId, String decription, Long imageId, String productName, Double price, Category category,
+	public Product(long productId, String decription, String productName, Double price, Category category,
 			String productState) {
 		this.productId = productId;
 		this.decription = decription;
-		this.imageId = imageId;
+		this.listImage = new ArrayList<Image>();
 		this.productName = productName;
 		this.price = price;
 		this.category = category;
@@ -70,12 +71,12 @@ public class Product implements java.io.Serializable {
 		this.decription = decription;
 	}
 
-	public Long getImageId() {
-		return this.imageId;
+	public List<Image>  getListImage() {
+		return this.listImage;
 	}
 
-	public void setImageId(Long imageId) {
-		this.imageId = imageId;
+	public void setImageId(List<Image>  listImage) {
+		this.listImage = listImage;
 	}
 
 	public String getProductName() {
