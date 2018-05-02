@@ -4,6 +4,7 @@ response.setCharacterEncoding("utf-8");
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -17,13 +18,6 @@ response.setCharacterEncoding("utf-8");
     </head>
     <body>
         
-        <%
-            String error = "";
-            if(request.getAttribute("error")!=null){
-                error = (String) request.getAttribute("error");
-            }
-        %>
-
         <jsp:include page="header.jsp"></jsp:include>
 
             <div id="wrapper">
@@ -32,23 +26,28 @@ response.setCharacterEncoding("utf-8");
 
                 <div id="rightContent">
                     <h3>Thông tin danh mục</h3>
-                    <form action="/Shop/ManagerCategoryServlet" method="post">
+                    <form:form action="save" method="POST" commandName="newCategory">
                     <table width="95%">
+                    	<tr>
+                            <td style="float: right"><b>Mã danh mục:</b></td>
+                            <td><form:input class="sedang" path="categoryId"/></td>
+                        </tr>
                         <tr>
                             <td style="float: right"><b>Tên danh mục:</b></td>
-                            <td><input type="text" class="sedang" name="tenDanhMuc"></td>
+                            <td><form:input class="sedang" path="categoryName"/></td>
                         </tr>
-                        <tr>
+                        <%-- <tr>
                         	<td></td>
                         	<td style=" color: red"><%=error%></td>
-                        </tr>
-                        <tr><td></td><td>
-                                <input type="hidden" name="command" value="insert">
-                                <input type="submit" class="button" value="Lưu dữ liệu">
+                        </tr> --%>
+                        <tr>
+                        	<td></td>
+                        	<td>
+                                <input type="submit" class="button" value="Lưu">
                             </td>
                         </tr>
                     </table>
-                    </form>
+                    </form:form>
                 </div>
                 <div class="clear"></div>
 

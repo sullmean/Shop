@@ -26,7 +26,7 @@ response.setCharacterEncoding("utf-8");
                     <h3>Quản lý danh mục</h3>
                     
                     <br/>
-                    <a href="${root}/admin/insert_category" class="button">Thêm danh mục</a>
+                    <a href="${root}/admin/manager_category/add" class="button">Thêm danh mục</a>
                     <table class="data">
 
                         <tr class="data">
