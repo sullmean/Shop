@@ -77,15 +77,11 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="${pageContext.request.contextPath}/index">Home</a></li>
-								<li class="dropdown"><a href="#">Sản Phẩm<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-<<<<<<< HEAD
-                                         
-=======
                                         <c:forEach var="item" items="${listCategory}">
 											<li><a href="${pageContext.request.contextPath}/product/list?categoryID=${item.categoryId}">${item.categoryName }</a></li>
 										</c:forEach> 
->>>>>>> 7d31094a4149d46d69475ee71d0016a346baa908
                                     </ul>
                                 </li> 
 								

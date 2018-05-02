@@ -11,12 +11,8 @@ import shop.service.CategoryService;
 @Controller
 @RequestMapping(value = "/admin/manager_category")
 public class CategoryController {
-<<<<<<< HEAD
-	
-=======
 	@Autowired
 	CategoryService categoryService;
->>>>>>> 7d31094a4149d46d69475ee71d0016a346baa908
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String manage_category(ModelMap mm) {
