@@ -32,7 +32,6 @@ public class TrangChuController {
 //	public String vieProduct() {
 //		return "product";
 //	}
-
 	@RequestMapping(value = "/cart")
 	public String vieCart() {
 		return "cart";

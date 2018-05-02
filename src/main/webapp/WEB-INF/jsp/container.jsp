@@ -19,7 +19,11 @@
 				<div class="product-image-wrapper">
 					<div class="single-products">
 						<div class="productinfo text-center">
+<<<<<<< HEAD
 							<a href="${pageContext.request.contextPath}/detail"><img src="${pageContext.request.contextPath}/resources/images/home/đầm chấm bi.jpg" alt="" /></a>
+=======
+							<a href="${pageContext.request.contextPath}/detail"><img src="${pageContext.request.contextPath}/resources/images/home/product1.jpg" alt="" /></a>
+>>>>>>> d1252bf308d5dd74a2a0223f65ea9058f52d2721
 							<h2> $ ${item.price} </h2>
 							<p> ${item.productName}</p>
 							<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
