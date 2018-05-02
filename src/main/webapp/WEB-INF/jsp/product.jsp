@@ -30,7 +30,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="${pageContext.request.contextPath}/resources/images/shop/55_large.jpg" alt="" />
+										<img src="${pageContext.request.contextPath}/resources/images/shop/đầm chấm bi.jpg" alt="" />
 										<h2> $ ${item.price} </h2>
 										<p> ${item.productName}</p>
 										<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
