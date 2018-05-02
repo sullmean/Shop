@@ -2,9 +2,6 @@
 request.setCharacterEncoding("utf-8");
 response.setCharacterEncoding("utf-8");
 %>
-<%-- <%@page import="model.LoaiSP"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="dao.LoaiSPDAO"%> --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -18,12 +15,7 @@ response.setCharacterEncoding("utf-8");
 
     </head>
     <body>
-<%-- 
-        <%
-        	LoaiSPDAO categoryDAO = new LoaiSPDAO();
-            ArrayList<LoaiSP> listCategory = categoryDAO.getListLoaiSP();
-        %> --%>
-
+		
         <jsp:include page="header.jsp"></jsp:include>
 
             <div id="wrapper">
@@ -38,21 +30,17 @@ response.setCharacterEncoding("utf-8");
                     <table class="data">
 
                         <tr class="data">
-                            <th class="data" width="30px">STT</th>
+                            <!-- <th class="data" width="30px">STT</th> -->
                             <th class="data">Mã danh mục</th>
                             <th class="data">Tên danh mục</th>
                             <th class="data" width="90px">Tùy chọn</th>
                         </tr>
-
-                        <%-- <%
-                            int count = 0;
-                            for(LoaiSP category : listCategory){
-                                count++;
-                        %> --%>
+                        
+						<c:forEach var="category" items="${listCategory}">
+                        
                         <tr class="data">
-                            <td class="data" width="30px"><%-- <%=count%> --%></td>
-                            <td class="data"><%-- <%=category.getMaLoai()%> --%></td>
-                            <td class="data"><%-- <%=category.getTenLoai()%> --%></td> 
+                            <td class="data">${category.categoryId}</td>
+                            <td class="data">${category.categoryName}</td> 
                             <td class="data" width="90px">
                             <center>
                                 <a href="<%-- ${root}/admin/update_category.jsp?command=update&category_id=<%=category.getMaLoai()%> --%>">Sửa</a>&nbsp;&nbsp; | &nbsp;&nbsp;
@@ -60,7 +48,7 @@ response.setCharacterEncoding("utf-8");
                             </center>
                             </td>
                         </tr>
-                        <%-- <%}%> --%>
+                       	</c:forEach>
 
                     </table>
                 </div>
