@@ -22,7 +22,7 @@
 							<img src="${pageContext.request.contextPath}/resources/images/home/product1.jpg" alt="" />
 							<h2> $ ${item.price} </h2>
 							<p> ${item.productName}</p>
-							<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+							<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 						</div>
 					</div>
 				</div>

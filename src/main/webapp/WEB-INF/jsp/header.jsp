@@ -76,13 +76,9 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="${pageContext.request.contextPath}/index">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Sản Phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="${pageContext.request.contextPath}/product">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="${pageContext.request.contextPath}/cart">Cart</a></li> 
-										<li><a href="${pageContext.request.contextPath}/account" class="active">Login</a></li> 
+                                         
                                     </ul>
                                 </li> 
 								
