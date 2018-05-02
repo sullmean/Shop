@@ -12,10 +12,10 @@ public class AdminController {
 		return "/admin/index";
 	}
 
-	@RequestMapping(value = "/manager_category", method = RequestMethod.GET)
-	public String vieManagerCategory() {
-		return "/admin/manager_category";
-	}
+//	@RequestMapping(value = "/manager_category", method = RequestMethod.GET)
+//	public String vieManagerCategory() {
+//		return "/admin/manager_category";
+//	}
 
 	@RequestMapping(value = "/manager_product", method = RequestMethod.GET)
 	public String vieManagerProduct() {
