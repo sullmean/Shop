@@ -14,11 +14,11 @@ import shop.model.HibernateUtil;
 public class ProductDAO {
 	//lấy danh sách sp theo mã danh mục
 	@SuppressWarnings("unchecked")
-	public ArrayList<Product> getProductByCategoryID(long categoryID) {
+	public ArrayList<Product> getProductByCategoryID(long category) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();
-		Query query = session.createQuery("from Product where categoryID = :categoryID");
-		query.setLong("categoryID", categoryID);
+		Query query = session.createQuery("from Product where category = :category");
+		query.setLong("category", category);
 		ArrayList<Product> list = (ArrayList<Product>) query.list();
 		transaction.commit();
 		return list;

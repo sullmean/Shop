@@ -32,7 +32,7 @@ response.setCharacterEncoding("utf-8");
 			<h3>Quản lí tài khoản</h3>
 			
 			<br/>
-			<a href="${root}/admin/insert_account.jsp" class="button">Thêm tài khoản</a>
+			<a href="${root}/admin/insert_account" class="button">Thêm tài khoản</a>
 			
 			<table class="data">
 				<tr class="data">

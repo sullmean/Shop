@@ -22,7 +22,20 @@ public class CategoryDAO {
 		return list;
 	}
 
+	public boolean insertCategory(Category category) {
+		try {
+			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+			Transaction transaction = session.beginTransaction();
+			session.save(category);
+			transaction.commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 	public static void main(String[] args) {
-		System.out.println(new CategoryDAO().getAllcategory().get(0));
+		System.out.println(new CategoryDAO().getAllcategory().get(0).getCategoryName());
 	}
 }

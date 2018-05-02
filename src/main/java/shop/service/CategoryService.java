@@ -16,4 +16,8 @@ public class CategoryService {
 	public ArrayList<Category> getAllcategory() {
 		return categoryDAO.getAllcategory();
 	}
+
+	public boolean insertCategory(Category category) {
+		return categoryDAO.insertCategory(category);
+	}
 }

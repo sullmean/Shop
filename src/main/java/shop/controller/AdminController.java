@@ -41,4 +41,20 @@ public class AdminController {
 	public String insert_product() {
 		return "/admin/insert_product";
 	}
+	@RequestMapping(value = "/insert_account", method = RequestMethod.GET)
+	public String insert_account() {
+		return "/admin/insert_account";
+	}
+	@RequestMapping(value = "/update_category", method = RequestMethod.GET)
+	public String update_category() {
+		return "/admin/update_category";
+	}
+	@RequestMapping(value = "/update_product", method = RequestMethod.GET)
+	public String update_product() {
+		return "/admin/update_product";
+	}
+	@RequestMapping(value = "/update_tthoadon", method = RequestMethod.GET)
+	public String update_tthoadon() {
+		return "/admin/update_tthoadon";
+	}
 }
