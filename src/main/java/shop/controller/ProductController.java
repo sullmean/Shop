@@ -16,7 +16,7 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	
-	@Autowired
+	@Autowired 
 	CategoryService categoryService;
 
 	@RequestMapping(value = "/list")
