@@ -5,9 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- <%@page import="model.LoaiSP"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="dao.LoaiSPDAO"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,34 +24,32 @@
 
 		<div id="rightContent">
 			<h3>Cập nhật danh mục</h3>
-			<form action="/Shop/ManagerCategoryServlet" method="post">
+			<form:form action="${root}/admin/manager_category/updateCategory1" method="POST" commandName="category">
 				<table width="95%">
-					<%-- <%	
-						LoaiSPDAO categoryDAO = new LoaiSPDAO();
-						String tenDanhMuc=categoryDAO.getTenLoaiByMaLoai(Long.parseLong(request.getParameter("category_id")));
-					%> --%>
-
-					
-					
+					<tr>
+						<td style="float: right"><b>Mã danh mục:</b></td>
+						<td>
+							<form:input readonly="true" class="sedang" path="categoryId" />
+						</td>
+					</tr>
 					<tr>
 						<td style="float: right"><b>Tên danh mục:</b></td>
 						<td>
-							<input type="text" class="sedang" name="tenDanhMuc" value="<%-- <%=tenDanhMuc%> --%>">
+							<form:input  class="sedang" path="categoryName" />
 						</td>
 					</tr>
+					<%-- <tr>
+						<td></td>
+						<td style="color: red"><%=error%></td>
+					</tr> --%>
 					<tr>
 						<td></td>
-						<td style="color: red"><%-- <%=error%> --%></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input type="hidden" name="command" value="update">
-							<input type="hidden" name="category_id" value="<%-- <%=request.getParameter("category_id")%> --%>"> 
-							<input type="submit" class="button" value="Lưu dữ liệu">
+						<td>
+							<input type="submit" class="button" value="Lưu">
 						</td>
 					</tr>
 				</table>
-			</form>
+			</form:form>
 		</div>
 		<div class="clear"></div>
 

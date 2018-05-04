@@ -20,4 +20,12 @@ public class CategoryService {
 	public boolean insertCategory(Category category) {
 		return categoryDAO.insertCategory(category);
 	}
+
+	public boolean updateCategory(Category category) {
+		return categoryDAO.updateCategory(category);
+	}
+
+	public Category findCategoryById(long categoryId) {
+		return categoryDAO.findCategoryByID(categoryId);
+	}
 }
