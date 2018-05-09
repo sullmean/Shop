@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- <%@page import="model.LoaiSP"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="dao.LoaiSPDAO"%>
-<%@page import="dao.SanPhamDAO"%>
-<%@page import="model.SanPham"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,31 +11,6 @@
 <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<%-- <%
-		String tensperr = "", tendanhmucerr = "", soluongerr = "", giaerr = "", motaerr = "", hinhanherr = "";
-		if(request.getParameter("tensperr")!=null){
-			tensperr = (String) request.getParameter("tensperr");
-		}
-		if(request.getParameter("tendanhmucerr")!=null){
-			tendanhmucerr = (String) request.getParameter("tendanhmucerr");
-		}
-		if(request.getParameter("soluongerr")!=null){
-			soluongerr = (String) request.getParameter("soluongerr");
-		}
-		if(request.getParameter("giaerr")!=null){
-			giaerr = (String) request.getParameter("giaerr");
-		}
-		if(request.getParameter("motaerr")!=null){
-			motaerr = (String) request.getParameter("motaerr");
-		}
-		if(request.getParameter("hinhanherr")!=null){
-			hinhanherr = (String) request.getParameter("hinhanherr");
-		}
-		SanPhamDAO spdao=new SanPhamDAO();
-		LoaiSPDAO categoryDAO = new LoaiSPDAO();
-		ArrayList<LoaiSP> listCategory = categoryDAO.getListLoaiSP();
-		SanPham sp=spdao.getSanPhamTheoMaSP(Long.parseLong(request.getParameter("masp")));
-	%> --%>
 	
 	<jsp:include page="header.jsp"></jsp:include>
 
@@ -50,68 +21,86 @@
 		<div id="rightContent">
 			<h3>Cập nhật sản phẩm</h3>
 			
-			<form action="/Shop/ManagerProductServlet" method="post">
+			<form:form action="${root}/admin/manager_product/updateProduct1" method="POST" commandName="product">
 			<table width="95%">
 				<tr>
-					<td><b>Tên sản phẩm:</b></td>
-					<td><input type="text" class="panjang" name="tensp" value="<%-- <%=sp.getTenSP()%> --%>"></td>
+					<td><b>Mã sản phẩm:</b></td>
+					<td><form:input class="panjang" path="productId"/></td>
 				</tr>
 				<tr>
-                        	<td></td>
-                        	<td style=" color: red"><%-- <%=tensperr%> --%></td>
-                </tr>
+					<td><b>Tên sản phẩm:</b></td>
+					<td><form:input class="panjang" path="productName"/></td>
+				</tr>
+				<%-- <tr>
+                     <td></td>
+                     <td style=" color: red"><%=tensperr%></td>
+                </tr> --%>
+                
 				<tr>
 					<td><b>Danh mục: </b></td>
-					<td><select name="tendanhmuc">
-							<option selected>-- Chọn danh mục --</option>
-							<%-- <%
-                            	for(LoaiSP category : listCategory){
-                			%> --%>
-							<option value="<%-- <%=category.getMaLoai()%> --%>" ><%-- <%=category.getTenLoai()%> --%></option>
-							<%-- <%}%> --%>
-					</select></td>
-				</tr>
-				<tr>
-					<td width="125px"><b>Số lượng</b></td>
-					<td>
-						<input type="text" class="pendek" name="soluong" value="<%-- <%=sp.getSoLuong()%> --%>">
+					<td >
+						<form:select path="${category}" >
+							<form:option  value="" label="-- Chọn danh mục --"/>
+							<form:options items="${listCategory}" itemValue="categoryId" itemLabel="categoryName"/>
+						</form:select>
 					</td>
 				</tr>
+				
+				<%-- <tr>
+                     <td></td>
+                     <td style=" color: red"><%=tendanhmucerr%></td>
+                </tr> --%>
+                 
 				<tr>
 					<td><b>Giá</b></td>
-					<td><input type="text" class="pendek" name="gia" value="<%-- <%=sp.getGia()%> --%>"></td>
+					<td><form:input  class="pendek" path="price"/></td>
 				</tr>
+				<%-- <tr>
+                     <td></td>
+                     <td style=" color: red"><%=giaerr%></td>
+                </tr> --%>
 				<tr>
 					<td><b>Mô tả</b></td>
-					<td><textarea name="mota"><%-- <%=sp.getMoTa()%> --%></textarea></td>
+					<td>
+						<form:textarea class="form-textarea" id="noiDung" path="decription"/>
+						<script type="text/javascript" language="javascript">
+						   CKEDITOR.replace('noiDung', {width: '500px',height: '100px'});
+						</script>
+					</td>
 				</tr>
+				<%-- <tr>
+                     <td></td>
+                     <td style=" color: red"><%=motaerr%></td>
+                </tr> --%>
 				<tr>
 					<td width="125px"><b>Hình ảnh</b></td>
 					<td>
-						<input type="file" value=" Chọn tệp " class="button" name="hinhanh"/>
+						<input type="file" value=" Chọn tệp " class="button" name="hinhanh" />
 					</td>
 				</tr>
 				<tr>
+                     <td></td>
+                     <td style=" color: red"><%-- <%=hinhanherr%> --%></td>
+                </tr>
+                <tr>
 					<td><b>Trạng thái: </b></td>
 					<td >
-						<select name="trangthai">
-							<option selected >-- Chọn trạng thái --</option>
-							<option value="Trong kho" >Trong kho</option>
-							<option value="hết hàng" >Hết hàng</option>
-							<option value="đã xóa" >Đã xóa</option>
-						</select>
+						<form:select path="productState">
+							<form:option value="" label="-- Chọn trạng thái --"/>
+							<form:option value="Trong kho" label="Trong kho"/>
+							<form:option value="hết hàng" label="Hết hàng"/>
+							<form:option value="không còn kinh doanh" label="không còn kinh doanh"/>
+						</form:select>
 					</td>
 				</tr>
 				<tr>
-					<td></td> 
+					<td></td>
 					<td>
-						<input type="hidden" name="command" value="update">
-                        <input type="hidden" name="masp" value="<%-- <%=request.getParameter("masp")%> --%>">
 						<input type="submit" class="button" value="Lưu dữ liệu">
 					</td>
 				</tr>
 			</table>
-			</form>
+			</form:form>
 		</div>
 
 

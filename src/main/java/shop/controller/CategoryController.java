@@ -17,6 +17,7 @@ public class CategoryController {
 	@Autowired
 	CategoryService categoryService;
 
+	// view trang qli danh mục
 	@RequestMapping(method = RequestMethod.GET)
 	public String manage_category(ModelMap mm) {
 		mm.put("listCategory", categoryService.getAllcategory());

@@ -43,7 +43,7 @@ response.setCharacterEncoding("utf-8");
                         <tr>
                         	<td></td>
                         	<td>
-                                <input type="submit" class="button" value="Lưu">
+                                <input type="submit" class="button" value="Lưu dữ liệu">
                             </td>
                         </tr>
                     </table>
