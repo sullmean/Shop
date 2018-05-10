@@ -4,10 +4,8 @@ response.setCharacterEncoding("utf-8");
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%@page import="model.TaiKhoan"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="dao.TaiKhoanDAO"%> --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,18 +15,7 @@ response.setCharacterEncoding("utf-8");
 <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<%-- <%
-		String tentkerr = "", emailtkerr = "", matkhautkerr = "";
-        if(request.getAttribute("tentkerr")!=null){
-        	tentkerr = (String) request.getAttribute("tentkerr");
-        }
-    	if(request.getAttribute("emailtkerr")!=null){
-    		emailtkerr = (String) request.getAttribute("emailtkerr");
-        }
-        if(request.getAttribute("matkhautkerr")!=null){
-        	matkhautkerr = (String) request.getAttribute("matkhautkerr");
-        }
-    %> --%>
+
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div id="wrapper">
@@ -38,11 +25,15 @@ response.setCharacterEncoding("utf-8");
 		<div id="rightContent">
 			<h3>Thêm tài khoản</h3>
 			
-			<form action="/Shop/TaiKhoanServlet" method="post">
+			<form:form action="save" method="POST" commandName="newUser">
 			<table width="95%">
 				<tr>
+					<td><b>Mã tài khoản:</b></td>
+					<td><form:input class="panjang" path="userId"/></td>
+				</tr>
+				<tr>
 					<td><b>Họ tên:</b></td>
-					<td><input type="text" class="panjang" name="tentk"></td>
+					<td><form:input class="panjang" path="userName"/></td>
 				</tr>
 				<tr>
                      <td></td>
@@ -51,7 +42,7 @@ response.setCharacterEncoding("utf-8");
 				
 				<tr>
 					<td width="125px"><b>Email: </b></td>
-					<td><input type="text" class="pendek" name="emailtk"></td>
+					<td><form:input  class="pendek" path="userEmail"/></td>
 				</tr>
 				<tr>
                      <td></td>
@@ -59,28 +50,44 @@ response.setCharacterEncoding("utf-8");
                 </tr>
 				<tr>
 					<td><b>Mật khẩu</b></td>
-					<td><input type="password" class="pendek" name="matkhautk"></td>
+					<td><form:password  class="pendek" path="userPass"/></td>
 				</tr>
 				<tr>
                      <td></td>
                      <td style=" color: red"><%-- <%=matkhautkerr%> --%></td>
                 </tr>
+                <tr>
+					<td><b>Địa chỉ</b></td>
+					<td><form:input  class="pendek" path="address"/></td>
+				</tr>
+				<tr>
+					<td width="125px"><b>Số điện thoại: </b></td>
+					<td><form:input  class="pendek" path="phone"/></td>
+				</tr>
+				<tr>
+					<td><b>Trạng thái: </b></td>
+					<td ><form:select path="active">
+							<form:option value="0"  label="chưa kích hoạt"/>
+							<form:option value="1" label="đã kích hoạt"/>
+					</form:select></td>
+				</tr>
 				<tr>
 					<td><b>Quyền hạn </b></td>
-					<td ><select name="quyentk">
-							<option value="khách hàng" selected>khách hàng</option>
-							<option value="admin" >admin</option>
-					</select></td>
+					<td ><form:select path="role">
+							<form:option value="khách hàng"  label="khách hàng"/>
+							<form:option value="admin" label="admin"/>
+					</form:select></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
-						<input type="hidden" name="commandtk" value="them">
 						<input type="submit" class="button" value="Lưu dữ liệu">
 					</td>
 				</tr>
 			</table>
-			</form>
+			
+			</form:form>
+			
 		</div>
 
 		<div class="clear"></div>

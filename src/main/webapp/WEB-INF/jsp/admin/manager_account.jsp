@@ -4,9 +4,6 @@ response.setCharacterEncoding("utf-8");
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%@page import="model.TaiKhoan"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="dao.TaiKhoanDAO"%> --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,10 +14,6 @@ response.setCharacterEncoding("utf-8");
 <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<%-- <%
-		TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
-        ArrayList<TaiKhoan> listAccount = taiKhoanDAO.getAllAccount(); 
-    %> --%>
 
 	<jsp:include page="header.jsp"></jsp:include>
 
@@ -32,33 +25,32 @@ response.setCharacterEncoding("utf-8");
 			<h3>Quản lí tài khoản</h3>
 			
 			<br/>
-			<a href="${root}/admin/insert_account" class="button">Thêm tài khoản</a>
+			<a href="${root}/admin/manager_account/add" class="button">Thêm tài khoản</a>
 			
 			<table class="data">
 				<tr class="data">
-					<th class="data">Mã TK</th>
-					<th class="data">Tên TK</th>
+					<th class="data"  width="10px">Mã TK</th>
+					<th class="data" width="100px">Họ tên</th>
 					<th class="data" >Email</th>
-					<th class="data" width="20px">Mật khẩu</th>
-					<th class="data">Quyền hạn</th>
+					<th class="data" >Địa chỉ</th>
+					<th class="data" width="100px">Phone</th>
+					<th class="data"  width="70px">Quyền hạn</th>
 					<th class="data" width="40px">Trạng thái</th>
 				</tr>
 				
-				<%-- <%
-                	for(TaiKhoan tk : listAccount){
-                %> --%>
+				<c:forEach var="user" items="${listUser}">
 				
 				<tr class="data"> 
-					
-					<td class="data"><%-- <%=tk.getMa_tai_khoan()%> --%></td>
-					<td class="data"><%-- <%=tk.getTen_tai_khoan()%>< --%></td>
-					<td class="data"><%-- <%=tk.getEmail()%> --%></td>
-					<td class="data"><%-- <%=tk.getMat_khau()%> --%></td>
-					<td class="data"><%-- <%=tk.getTen_Quyen()%> --%></td>
-					<td class="data"><%-- <%=tk.isTinh_trang()%> --%></td>
+					<td class="data">${user.userId }</td>
+					<td class="data">${user.userName }</td>
+					<td class="data">${user.userEmail }</td>
+					<td class="data">${user.address }</td>
+					<td class="data">${user.phone }</td>
+					<td class="data">${user.role }</td>
+					<td class="data">${user.active }</td>
 				</tr>
 				
-				<%-- <%}%> --%>
+				</c:forEach>
 				
 			</table>
 		</div>

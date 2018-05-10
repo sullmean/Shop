@@ -27,6 +27,7 @@ public class User implements java.io.Serializable {
 	private String userPass;
 	@Column(name = "active")
 	private Boolean active;
+	@Column(name = "role")
 	private String role;
 	@Column(name = "phone")
 	private String phone;

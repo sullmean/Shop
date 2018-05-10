@@ -11,23 +11,38 @@ import shop.entities.User;
 import shop.service.UserService;
 
 @Controller
-@RequestMapping(value = "/account")
+@RequestMapping(value = "/admin/manager_account")
 public class UserController {
 	@Autowired
 	private UserService userService;
-	
+
+	// @RequestMapping(method = RequestMethod.GET)
+	// public String account(ModelMap model) {
+	// User user = new User();
+	// user.setUserName("abc");
+	// user.setUserEmail("abc123");
+	// model.addAttribute("user", user);
+	// return "account";
+	// }
+
 	@RequestMapping(method = RequestMethod.GET)
-	public String account(ModelMap model) {
-		User user = new User();
-		user.setUserName("abc");
-		user.setUserEmail("abc123");
-		model.addAttribute("user", user);
-		return "account";
+	public String vieManagerAccount(ModelMap mm) {
+		mm.put("listUser", userService.getAllUser());
+		return "/admin/manager_account";
 	}
-	
-	@RequestMapping(value = "/new", method = RequestMethod.POST)
-	public String newAccount(@ModelAttribute("user") User user) {
-		userService.save(user);
-		return "index";
+
+	// add
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public String insertUser(ModelMap mm) {
+		mm.put("newUser", new User());
+		return "/admin/insert_account";
+	}
+
+	// lưu
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public String saveUser(ModelMap mm, @ModelAttribute(value = "newUser") User user) {
+		userService.insertUser(user);
+		mm.put("listUser", userService.getAllUser());
+		return "/admin/manager_account";
 	}
 }

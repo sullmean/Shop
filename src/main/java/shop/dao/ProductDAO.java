@@ -7,7 +7,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
-import shop.entities.Category;
 import shop.entities.Product;
 import shop.model.HibernateUtil;
 
