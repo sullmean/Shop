@@ -46,8 +46,8 @@ public class UserDAO {
 		Criteria criteria = session.createCriteria(User.class);
 		criteria.add(Restrictions.eq("userEmail", email));
 		criteria.add(Restrictions.eq("userPass", password));
-		transaction.commit();
 		List<User> users = criteria.list();
+		transaction.commit();
 		if (!users.isEmpty()) {
 			return users.get(0);
 		}

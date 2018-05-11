@@ -13,7 +13,7 @@ import shop.entities.User;
 import shop.service.UserService;
 
 @Controller
-@RequestMapping(value = "/admin/manager_account")
+@RequestMapping(value = "account")
 public class UserController {
 	@Autowired
 	private UserService userService;
@@ -23,27 +23,6 @@ public class UserController {
 		User user = new User();
 		model.addAttribute("user", user);
 		return "account";
-	}
-
-	@RequestMapping(value = "admin", method = RequestMethod.GET)
-	public String vieManagerAccount(ModelMap mm) {
-		mm.put("listUser", userService.getAllUser());
-		return "/admin/manager_account";
-	}
-
-	// add
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public String insertUser(ModelMap mm) {
-		mm.put("newUser", new User());
-		return "/admin/insert_account";
-	}
-
-	// lưu
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveUser(ModelMap mm, @ModelAttribute(value = "newUser") User user) {
-		userService.insertUser(user);
-		mm.put("listUser", userService.getAllUser());
-		return "/admin/manager_account";
 	}
 
 	@RequestMapping(value = "/new", method = RequestMethod.POST)
