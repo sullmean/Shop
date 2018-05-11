@@ -3,6 +3,8 @@ package shop.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,6 +20,7 @@ public class User implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "userID", unique = true, nullable = false)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long userId;
 	@Column(name = "userName")
 	private String userName;
