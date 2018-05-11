@@ -22,7 +22,7 @@
 
 			<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
+						<h2 class="title text-center">SẢN PHẨM</h2>
 						
 						<c:forEach var="item" items="${listProduct}">
 						
@@ -30,10 +30,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="${pageContext.request.contextPath}/resources/images/shop/đầm chấm bi.jpg" alt="" />
+										<img src="${pageContext.request.contextPath}/resources/images/shop/ao_hoa_beo_vang__ayv50-2_149k_-_quan_-_syv40_139k___1__large.jpg" alt="" />
 										<h2> $ ${item.price} </h2>
 										<p> ${item.productName}</p>
-										<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 									</div>
 									
 								</div>

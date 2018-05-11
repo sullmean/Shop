@@ -28,7 +28,7 @@
 									<span>E</span>-SHOPPER
 								</h1>
 								<h2>Tự hào là thương hiệu thời trang giá rẻ đầu tiên tại Việt Nam.</h2>
-								<a href="${pageContext.request.contextPath}/container"><button type="button" class="btn btn-default get">Xem thêm</button></a>
+								<a href="${pageContext.request.contextPath}/index"><button type="button" class="btn btn-default get">Xem thêm</button></a>
 							</div>
 							<div class="col-sm-6">
 								<img src="${pageContext.request.contextPath}/resources/images/home/girl1.jpg" class="girl img-responsive"
@@ -41,7 +41,7 @@
 									<span>E</span>-SHOPPER
 								</h1>
 								<h2>Tự hào là thương hiệu thời trang giá rẻ đầu tiên tại Việt Nam.</h2>
-								<a href="${pageContext.request.contextPath}/container"><button type="button" class="btn btn-default get">Xem thêm</button></a>
+								<a href="${pageContext.request.contextPath}/index"><button type="button" class="btn btn-default get">Xem thêm</button></a>
 							</div>
 							<div class="col-sm-6">
 								<img src="${pageContext.request.contextPath}/resources/images/home/girl2.jpg" class="girl img-responsive"
@@ -55,7 +55,7 @@
 									<span>E</span>-SHOPPER
 								</h1>
 								<h2>Tự hào là thương hiệu thời trang giá rẻ đầu tiên tại Việt Nam.</h2>
-								<a href="${pageContext.request.contextPath}/container"><button type="button" class="btn btn-default get">Xem thêm</button></a>
+								<a href="${pageContext.request.contextPath}/index"><button type="button" class="btn btn-default get">Xem thêm</button></a>
 							</div>
 							<div class="col-sm-6">
 								<img src="${pageContext.request.contextPath}/resources/images/home/girl3.jpg" class="girl img-responsive"

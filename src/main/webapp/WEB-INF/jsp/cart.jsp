@@ -13,34 +13,34 @@
 	<div class="container">
 		<div class="breadcrumbs">
 			<ol class="breadcrumb">
-				<li><a href="${pageContext.request.contextPath}/index">Home</a></li>
-				<li class="active">Shopping Cart</li>
+				<li><a href="${pageContext.request.contextPath}/index">Trang Chủ</a></li>
+				<li class="active">Giỏ Hàng</li>
 			</ol>
 		</div>
 		<div class="table-responsive cart_info">
 			<table class="table table-condensed">
 				<thead>
 					<tr class="cart_menu">
-						<td class="image">Item</td>
+						<td class="image">Tên sản phẩm</td>
 						<td class="description"></td>
-						<td class="price">Price</td>
-						<td class="quantity">Quantity</td>
-						<td class="total">Total</td>
+						<td class="price">Giá</td>
+						<td class="quantity">Số lượng</td>
+						<td class="total">Tổng cộng</td>
 						<td></td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="cart_product"><a href=""><img
-								src="${pageContext.request.contextPath}/resources/images/cart/one.png" alt=""></a></td>
+								src="${pageContext.request.contextPath}/resources/images/cart/50_small.jpg" alt=""></a></td>
 						<td class="cart_description">
 							<h4>
-								<a href="">Colorblock Scuba</a>
+								<a href="">Đầm hai dây</a>
 							</h4>
 							<p>Web ID: 1089772</p>
 						</td>
 						<td class="cart_price">
-							<p>$59</p>
+							<p>187.000 VND</p>
 						</td>
 						<td class="cart_quantity">
 							<div class="cart_quantity_button">
@@ -51,7 +51,7 @@
 							</div>
 						</td>
 						<td class="cart_total">
-							<p class="cart_total_price">$59</p>
+							<p class="cart_total_price">187.000 VND</p>
 						</td>
 						<td class="cart_delete"><a class="cart_quantity_delete"
 							href=""><i class="fa fa-times"></i></a></td>
@@ -59,15 +59,15 @@
 
 					<tr>
 						<td class="cart_product"><a href=""><img
-								src="${pageContext.request.contextPath}/resources/images/cart/two.png" alt=""></a></td>
+								src="${pageContext.request.contextPath}/resources/images/cart/ao_hoa_beo_vang__ayv50-2_149k_-_quan_-_syv40_139k___1__small.jpg" alt=""></a></td>
 						<td class="cart_description">
 							<h4>
-								<a href="">Colorblock Scuba</a>
+								<a href="">Áo hoa bèo vàng</a>
 							</h4>
 							<p>Web ID: 1089772</p>
 						</td>
 						<td class="cart_price">
-							<p>$59</p>
+							<p>145.000 VND</p>
 						</td>
 						<td class="cart_quantity">
 							<div class="cart_quantity_button">
@@ -78,22 +78,22 @@
 							</div>
 						</td>
 						<td class="cart_total">
-							<p class="cart_total_price">$59</p>
+							<p class="cart_total_price">145.000 VND</p>
 						</td>
 						<td class="cart_delete"><a class="cart_quantity_delete"
 							href=""><i class="fa fa-times"></i></a></td>
 					</tr>
 					<tr>
 						<td class="cart_product"><a href=""><img
-								src="${pageContext.request.contextPath}/resources/images/cart/three.png" alt=""></a></td>
+								src="${pageContext.request.contextPath}/resources/images/cart/đầm baby.jpg" alt=""></a></td>
 						<td class="cart_description">
 							<h4>
-								<a href="">Colorblock Scuba</a>
+								<a href="">Đầm baby</a>
 							</h4>
 							<p>Web ID: 1089772</p>
 						</td>
 						<td class="cart_price">
-							<p>$59</p>
+							<p>196.000 VND</p>
 						</td>
 						<td class="cart_quantity">
 							<div class="cart_quantity_button">
@@ -104,7 +104,7 @@
 							</div>
 						</td>
 						<td class="cart_total">
-							<p class="cart_total_price">$59</p>
+							<p class="cart_total_price">196.000 VND</p>
 						</td>
 						<td class="cart_delete"><a class="cart_quantity_delete"
 							href=""><i class="fa fa-times"></i></a></td>
@@ -119,33 +119,37 @@
 	<section id="do_action">
 	<div class="container">
 		<div class="heading">
-			<h3>What would you like to do next?</h3>
-			<p>Choose if you have a discount code or reward points you want
-				to use or would like to estimate your delivery cost.</p>
+			<p>Chọn nếu bạn có mã giảm giá hoặc điểm thưởng bạn muốn sử dụng hoặc muốn ước tính chi phí phân phối của mình.</p>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="chose_area">
 					<ul class="user_option">
-						<li><input type="checkbox"> <label>Use Coupon
-								Code</label></li>
-						<li><input type="checkbox"> <label>Use Gift
-								Voucher</label></li>
-						<li><input type="checkbox"> <label>Estimate
-								Shipping & Taxes</label></li>
+						<li><input type="checkbox"> <label>Sử dụng mã phiếu giảm giá</label></li>
+						<li><input type="checkbox"> <label>Sử dụng phiêu quà tặng</label></li>
+						
+						<li class="single_field zip-field"><label>Địa chỉ email</label><p> <input
+							type="text" placeholder="Vui lòng nhập địa chỉ email"></p></li>
+							
+						<li class="single_field zip-field"><label>Tên</label><p> <input
+							type="text" placeholder="Họ Tên"></p></li>
+							
+						<li class="single_field zip-field"><label>Số điện thoại</label><p> <input
+							type="text" placeholder="Vui lòng nhập SĐT"></p></li>
+						
 					</ul>
 					<ul class="user_info">
-						<li class="single_field"><label>Country:</label> <select>
-								<option>United States</option>
-								<option>Bangladesh</option>
-								<option>UK</option>
+						<li class="single_field"><label>Tỉnh/Thành Phố:</label> <select>
+								<option>Hồ Chí Minh City</option>
+								<option>Long AN</option>
+								<option>Đồng Nai</option>
 								<option>India</option>
 								<option>Pakistan</option>
 								<option>Ucrane</option>
 								<option>Canada</option>
 								<option>Dubai</option>
 						</select></li>
-						<li class="single_field"><label>Region / State:</label> <select>
+						<li class="single_field"><label>Quận / Huyện:</label> <select>
 								<option>Select</option>
 								<option>Dhaka</option>
 								<option>London</option>
@@ -155,23 +159,24 @@
 								<option>Canada</option>
 								<option>Dubai</option>
 						</select></li>
-						<li class="single_field zip-field"><label>Zip Code:</label> <input
-							type="text"></li>
+						
+						<li class="single_field zip-field"><label>Địa chỉ nhận hàng</label> <input
+							type="text" placeholder="Vui lòng nhập địa chỉ"></li>
 					</ul>
-					<a class="btn btn-default update" href="">Get Quotes</a> <a
-						class="btn btn-default check_out" href="">Continue</a>
+					<a class="btn btn-default update" href="">Nhận báo giá</a> <a
+						class="btn btn-default check_out" href="">Tiếp tục</a>
 				</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="total_area">
 					<ul>
-						<li>Cart Sub Total <span>$59</span></li>
-						<li>Eco Tax <span>$2</span></li>
-						<li>Shipping Cost <span>Free</span></li>
-						<li>Total <span>$61</span></li>
+						<li>Tổng sản phẩm<span>185.000 VND</span></li>
+						<li>Thuế<span>0%</span></li>
+						<li>Phí vận chuyển<span>Free</span></li>
+						<li>Tổng tiền<span>$61</span></li>
 					</ul>
-					<a class="btn btn-default update" href="">Update</a> <a
-						class="btn btn-default check_out" href="">Check Out</a>
+					<a class="btn btn-default update" href="">Cập nhật</a> <a
+						class="btn btn-default check_out" href="${pageContext.request.contextPath}/checkout">Kiểm tra</a>
 				</div>
 			</div>
 		</div>

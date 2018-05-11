@@ -19,8 +19,9 @@
 					<!--product-details-->
 					<div class="col-sm-5">
 						<div class="view-product">
-							<img src="${pageContext.request.contextPath}/resources/images/product-details/1.jpg" alt="" />
-							<h3>ZOOM</h3>
+							<a href=""><img
+								src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__large.jpg"
+								alt=""></a>
 						</div>
 						<div id="similar-product" class="carousel slide"
 							data-ride="carousel">
@@ -28,24 +29,40 @@
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner">
 								<div class="item active">
-									<a href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/similar1.jpg"
+									<a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___1__small.jpg"
 										alt=""></a> <a href=""><img
-										src="${pageContext.request.contextPath}/resources/images/product-details/similar2.jpg" alt=""></a> <a
-										href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/similar3.jpg"
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
+										alt=""></a> <a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
+										alt=""></a>
+										<a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
+										alt=""></a>
+										
+								</div>
+								<div class="item">
+									<a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___1__small.jpg"
+										alt=""></a> <a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
+										alt=""></a> <a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___1__small.jpg"
+										alt=""></a>
+										<a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
 										alt=""></a>
 								</div>
 								<div class="item">
-									<a href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/similar1.jpg"
+									<a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
 										alt=""></a> <a href=""><img
-										src="${pageContext.request.contextPath}/resources/images/product-details/similar2.jpg" alt=""></a> <a
-										href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/similar3.jpg"
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___1__small.jpg"
+										alt=""></a> <a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
 										alt=""></a>
-								</div>
-								<div class="item">
-									<a href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/similar1.jpg"
-										alt=""></a> <a href=""><img
-										src="${pageContext.request.contextPath}/resources/images/product-details/similar2.jpg" alt=""></a> <a
-										href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/similar3.jpg"
+										<a href=""><img
+										src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__small.jpg"
 										alt=""></a>
 								</div>
 
@@ -63,27 +80,22 @@
 					<div class="col-sm-7">
 						<div class="product-information">
 							<!--/product-information-->
-							<img src="${pageContext.request.contextPath}/resources/images/product-details/new.jpg" class="newarrival"
-								alt="" />
-							<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-							<p>Web ID: 1089772</p>
-							<img src="${pageContext.request.contextPath}/resources/images/product-details/rating.png" alt="" /> <span>
-								<span>US $59</span> <label>Quantity:</label> <input type="text"
-								value="3" />
-								<button type="button" class="btn btn-fefault cart">
-									<i class="fa fa-shopping-cart"></i> Add to cart
-								</button>
+							<a href=""><img
+								src="${pageContext.request.contextPath}/resources/images/product-details/new.jpg"
+								class="newarrival" alt="" /></a>
+							<h2>ĐẦM ĐỎ BÈO TAY DÀI</h2>
+							
+							<img
+								src="${pageContext.request.contextPath}/resources/images/product-details/rating.png"
+								alt="" /> <span> <span>145.000VND</span> <label>Số Lượng:</label>
+								<input type="text" value="3" />
+								<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 							</span>
 							<p>
-								<b>Availability:</b> In Stock
+								<b>Hàng:</b> Mới
 							</p>
-							<p>
-								<b>Condition:</b> New
-							</p>
-							<p>
-								<b>Brand:</b> E-SHOPPER
-							</p>
-							<a href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/share.png"
+							<a href=""><img
+								src="${pageContext.request.contextPath}/resources/images/product-details/share.png"
 								class="share img-responsive" alt="" /></a>
 						</div>
 						<!--/product-information-->
@@ -95,12 +107,8 @@
 					<!--category-tab-->
 					<div class="col-sm-12">
 						<ul class="nav nav-tabs">
-							<li><a href="#details" data-toggle="tab">Details</a></li>
-							<li><a href="#companyprofile" data-toggle="tab">Company
-									Profile</a></li>
-							<li><a href="#tag" data-toggle="tab">Tag</a></li>
-							<li class="active"><a href="#reviews" data-toggle="tab">Reviews
-									(5)</a></li>
+							<li><a href="" data-toggle="tab">Chi tiết sản phẩm</a></li>
+
 						</ul>
 					</div>
 					<div class="tab-content">
@@ -109,11 +117,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery1.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/51_large.jpg"
+												alt="" /></a>
+											<h2>245.000 VND</h2>
+											<p>Đầm hai dây</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -123,11 +133,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery2.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/dam_voan_yem-dwv79_229k___2__large.jpg"
+												alt="" /></a>
+											<h2>229.000 VND</h2>
+											<p>Đầm voan yếm</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -137,11 +149,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery3.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/sơ mi buộc nơ_large.jpg"
+												alt="" /></a>
+											<h2>205.000 VND</h2>
+											<p>Sơ mi buộc nơ</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -151,11 +165,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery4.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/váy hoa xanh_large.jpg"
+												alt="" /></a>
+											<h2>200.000 VND</h2>
+											<p>Váy hoa xanh</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -168,11 +184,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery1.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/dam_do_beo_tay_dai_-_dk275__189k___2__large.jpg"
+												alt="" /></a>
+											<h2>189.000 VND</h2>
+											<p>Đầm đỏ bèo tay dài</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -182,11 +200,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery3.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/dam_beo_-dk239_189k___3__large.jpg"
+												alt="" /></a>
+											<h2>189.000 VND</h2>
+											<p>Đầm bèo</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -196,11 +216,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery2.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/dam_xanh_chit_eo-dk285_189k__large.jpg"
+												alt="" /></a>
+											<h2>285.000 VND</h2>
+											<p>Đầm xanh</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -210,11 +232,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery4.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/đầm baby3.jpg"
+												alt="" /></a>
+											<h2>185.000 VND</h2>
+											<p>Đầm baby</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -227,11 +251,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery1.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/ao_hoa_beo_vang__ayv50-2_149k_-_quan_-_syv40_139k___1__large.jpg"
+												alt="" /></a>
+											<h2>149.000 VNd</h2>
+											<p>Áo hoa</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -241,11 +267,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery2.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/dam_do_beo_tay_dai_-_dk275__189k___2__large.jpg"
+												alt="" /></a>
+											<h2>189.000 VND</h2>
+											<p>Đầm đỏ bèo tay dài</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -255,11 +283,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery3.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/dam_beo_-dk239_189k___3__large.jpg"
+												alt="" /></a>
+											<h2>239.000 VND</h2>
+											<p>Đầm bèo</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -269,11 +299,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="${pageContext.request.contextPath}/resources/images/home/gallery4.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
+											<a><img
+												src="${pageContext.request.contextPath}/resources/images/home/quan_ong_rong_-qk284_159k_-_ao_chu_theu-dk242_179k___5__large.jpg"
+												alt="" /></a>
+											<h2>284.000 VND</h2>
+											<p>Quần ống rộng</p>
 											<button type="button" class="btn btn-default add-to-cart">
-												<i class="fa fa-shopping-cart"></i>Add to cart
+												<i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng
 											</button>
 										</div>
 									</div>
@@ -284,31 +316,16 @@
 						<div class="tab-pane fade active in" id="reviews">
 							<div class="col-sm-12">
 								<ul>
-									<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
 									<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-									<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC
+									<li><a href=""><i class="fa fa-calendar-o"></i>5 MAY 5
 											2014</a></li>
 								</ul>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-									sed do eiusmod tempor incididunt ut labore et dolore magna
-									aliqua.Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis
-									aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur.</p>
-								<p>
-									<b>Write Your Review</b>
-								</p>
+								<p>: Nữ tính và thanh lịch với mẫu áo bèo xanh đến từ
+									Valanno. Với chất liệu phi bóng mềm mịn thấm hút tốt giúp người
+									mặc cảm thấy thoải mái khi diện. Thiết kế phần vạt bèo ngực với
+									phần tay loe mang lại sự trẻ trung nhưng không kém phần thời
+									trang.</p>
 
-								<form action="#">
-									<span> <input type="text" placeholder="Your Name" /> <input
-										type="email" placeholder="Email Address" />
-									</span>
-									<textarea name=""></textarea>
-									<b>Rating: </b> <img src="${pageContext.request.contextPath}/resources/images/product-details/rating.png"
-										alt="" />
-									<button type="button" class="btn btn-default pull-right">
-										Submit</button>
-								</form>
 							</div>
 						</div>
 
@@ -318,7 +335,7 @@
 
 				<div class="recommended_items">
 					<!--recommended_items-->
-					<h2 class="title text-center">recommended items</h2>
+					<h2 class="title text-center">SẢN PHẨM KHÁC</h2>
 
 					<div id="recommended-item-carousel" class="carousel slide"
 						data-ride="carousel">
@@ -328,12 +345,12 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="${pageContext.request.contextPath}/resources/images/home/recommend1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart">
-													<i class="fa fa-shopping-cart"></i>Add to cart
-												</button>
+												<a href=""><img
+													src="${pageContext.request.contextPath}/resources/images/home/51_large.jpg"
+													alt="" /></a>
+												<h2>209.000 VND</h2>
+												<a href=""><p>Đầm hai dây</p></a>
+												<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 											</div>
 										</div>
 									</div>
@@ -342,12 +359,12 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="${pageContext.request.contextPath}/resources/images/home/recommend2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart">
-													<i class="fa fa-shopping-cart"></i>Add to cart
-												</button>
+												<a href=""><img
+													src="${pageContext.request.contextPath}/resources/images/home/ao_hoa_beo_vang__ayv50-2_149k_-_quan_-_syv40_139k___1__large.jpg"
+													alt="" /></a>
+												<h2>152.000 VND</h2>
+												<a href=""><p>Áo hoa bèo vàng</p></a>
+												<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 											</div>
 										</div>
 									</div>
@@ -356,12 +373,12 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="${pageContext.request.contextPath}/resources/images/home/recommend3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart">
-													<i class="fa fa-shopping-cart"></i>Add to cart
-												</button>
+												<a href=""><img
+													src="${pageContext.request.contextPath}/resources/images/home/dam_voan_yem-dwv79_229k___2__large.jpg"
+													alt="" /></a>
+												<h2>192.000 VND</h2>
+												<a href=""><p>Đầm voan yếm</p></a>
+												<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 											</div>
 										</div>
 									</div>
@@ -372,12 +389,12 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="${pageContext.request.contextPath}/resources/images/home/recommend1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart">
-													<i class="fa fa-shopping-cart"></i>Add to cart
-												</button>
+												<a href=""><img
+													src="${pageContext.request.contextPath}/resources/images/home/dam_xanh_chit_eo-dk285_189k__large.jpg"
+													alt="" /></a>
+												<h2>183.000 VND</h2>
+												<a href=""><p>Đầm xanh</p></a>
+												<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 											</div>
 										</div>
 									</div>
@@ -386,12 +403,12 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="${pageContext.request.contextPath}/resources/images/home/recommend2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart">
-													<i class="fa fa-shopping-cart"></i>Add to cart
-												</button>
+												<a href=""><img
+													src="${pageContext.request.contextPath}/resources/images/home/sơ mi buộc nơ_large.jpg"
+													alt="" /></a>
+												<h2>145.000 VND</h2>
+												<a href=""><p>Sơ mi buộc nơ</p></a>
+												<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 											</div>
 										</div>
 									</div>
@@ -400,12 +417,12 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="${pageContext.request.contextPath}/resources/images/home/recommend3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart">
-													<i class="fa fa-shopping-cart"></i>Add to cart
-												</button>
+												<a href=""><img 
+													src="${pageContext.request.contextPath}/resources/images/home/váy hoa xanh_large.jpg"
+													alt="" /></a>
+												<h2>185.000 VND</h2>
+												<a href=""><p>Váy hoa xanh</p></a>
+												<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 											</div>
 										</div>
 									</div>

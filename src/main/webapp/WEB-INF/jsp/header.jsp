@@ -52,8 +52,26 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="${pageContext.request.contextPath}/account" class="active"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG</a></li>
+								<li>
+									<c:if test="${not empty sessionScope.user }">
+										<a href="${pageContext.request.contextPath}/account/logout">
+										Đăng Xuất
+										</a>
+									</c:if>
+									<c:if test="${empty sessionScope.user }">
+									<a href="${pageContext.request.contextPath}/account" class="active">
+										<i class="fa fa-lock"></i>ĐĂNG NHẬP
+									</a>
+									</c:if>
+								</li>
+								<c:if test="${not empty sessionScope.user }">
+								<li>
+									<a>
+										${sessionScope.user.userName }
+									</a>
+								</li>
+								</c:if>
 							</ul>
 						</div>
 					</div>
@@ -90,7 +108,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" placeholder="Tìm kiếm"/>
 						</div>
 					</div>
 				</div>

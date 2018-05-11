@@ -20,4 +20,8 @@ public class UserService {
 	public ArrayList<User> getAllUser() {
 		return userDao.getAllUser();
 	}
+	public User getUser(String email, String password) {
+		return userDao.getUser(email, password);
+		
+	}
 }

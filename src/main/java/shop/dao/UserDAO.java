@@ -1,10 +1,13 @@
 package shop.dao;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import shop.entities.User;
@@ -37,4 +40,17 @@ public class UserDAO {
 		return false;
 	}
 
+	public User getUser(String email, String password) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Transaction transaction = session.beginTransaction();
+		Criteria criteria = session.createCriteria(User.class);
+		criteria.add(Restrictions.eq("userEmail", email));
+		criteria.add(Restrictions.eq("userPass", password));
+		transaction.commit();
+		List<User> users = criteria.list();
+		if (!users.isEmpty()) {
+			return users.get(0);
+		}
+		return null;
+	}
 }

@@ -17,29 +17,32 @@
 			<div class="col-sm-4 col-sm-offset-1">
 				<div class="login-form">
 					<!--login form-->
-					<h2>Login to your account</h2>
-					<form action="#">
-						<input type="text" placeholder="Name" /> <input type="email"
-							placeholder="Email Address" /> <span> <input
-							type="checkbox" class="checkbox"> Keep me signed in
+					<h2>ĐĂNG NHẬP</h2>
+					${error }
+					<form:form action="${pageContext.request.contextPath }/account/login" modelAttribute ="user" method= "post">
+						<form:input path= "userEmail" placeholder="Email" /> 
+						<form:password path= "userPass" placeholder="PassWord" /> <span> 
+						<input type="checkbox" class="checkbox"> Lưu đăng nhập
 						</span>
-						<button type="submit" class="btn btn-default">Login</button>
-					</form>
+						<button type="submit" class="btn btn-default">ĐĂNG NHẬP</button>
+						<a href=""><p>Quên mật khẩu</p></a>
+					</form:form>
 				</div>
 				<!--/login form-->
 			</div>
 			<div class="col-sm-1">
-				<h2 class="or">OR</h2>
+				<h2 class="or">HOẶC</h2>
 			</div>
 			<div class="col-sm-4">
 				<div class="signup-form">
 					<!--sign up form-->
-					<h2>New User Signup!</h2>
+					<h2>ĐĂNG KÝ</h2>
 					<form:form action="${pageContext.request.contextPath }/account/new" modelAttribute="user" method="post">
-						<form:input path="userName" placeholder="Name" /> 
-						<form:input path="userEmail" placeholder="Email Address" />
-						<form:password path="userPass" placeholder="Password" />
-						<button type="submit" class="btn btn-default">Signup</button>
+						<form:input path="userName" placeholder="TÊN" /> 
+						<form:input path="userEmail" placeholder="Địa chỉ email" />
+						<form:password path="userPass" placeholder="Mật khẩu" />
+						<button type="submit" class="btn btn-default">ĐĂNG KÝ</button>
+						<a href="${pageContext.request.contextPath}/index"><p>Quay lại trang chủ</p></a>
 					</form:form>
 				</div>
 				<!--/sign up form-->

@@ -12,7 +12,7 @@
 		<div class="left-sidebar">
 
 			<div class="brands_products">
-				<h2>Category</h2>
+				<h2>DANH MỤC SẢN PHẨM</h2>
 				<!--brands_products-->
 				<div class="brands-name">
 					<ul class="nav nav-pills nav-stacked">
