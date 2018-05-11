@@ -25,12 +25,9 @@ response.setCharacterEncoding("utf-8");
 		<div id="rightContent">
 			<h3>Thêm tài khoản</h3>
 			
-			<form:form action="save" method="POST" commandName="newUser">
+			<form:form action="${pageContext.request.contextPath }/admin/manager_account/save" method="POST" commandName="newUser">
 			<table width="95%">
-				<tr>
-					<td><b>Mã tài khoản:</b></td>
-					<td><form:input class="panjang" path="userId"/></td>
-				</tr>
+				<form:hidden class="panjang" path="userId"/>
 				<tr>
 					<td><b>Họ tên:</b></td>
 					<td><form:input class="panjang" path="userName"/></td>
