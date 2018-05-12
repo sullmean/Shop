@@ -1,5 +1,5 @@
 package shop.entities;
-//Generated Apr 21, 2018 4:25:32 PM by Hibernate Tools 5.2.8.Final
+// Generated Apr 21, 2018 4:25:32 PM by Hibernate Tools 5.2.8.Final
 
 import java.util.ArrayList;
 import java.util.Date;

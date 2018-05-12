@@ -20,7 +20,7 @@ public class User implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "userID", unique = true, nullable = false)
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long userId;
 	@Column(name = "userName")
 	private String userName;
