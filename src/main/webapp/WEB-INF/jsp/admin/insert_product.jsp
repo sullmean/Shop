@@ -42,7 +42,7 @@ response.setCharacterEncoding("utf-8");
 				<tr>
 					<td><b>Danh mục: </b></td>
 					<td >
-						<form:select path="${category}" >
+						<form:select path="${category}"  class="panjang">
 							<form:option  value="" label="-- Chọn danh mục --"/>
 							<form:options items="${listCategory}" itemValue="categoryId" itemLabel="categoryName"/>
 							<%-- <%

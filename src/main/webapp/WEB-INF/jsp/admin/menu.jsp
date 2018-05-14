@@ -22,6 +22,7 @@ response.setCharacterEncoding("utf-8");
 			<li><a href="${root}/admin/manager_product">Sản phẩm</a></li>
 			<li><a href="${root}/admin/manager-bill">Hóa đơn</a></li>
 			<li><a href="${root}/admin/manager_account">Tài khoản</a></li>
+			<li><a href="${root}/admin/manager_image">Hình ảnh</a></li>
 		</ul>
 	</div>
 

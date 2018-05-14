@@ -25,7 +25,7 @@
 			<table width="95%">
 				<tr>
 					<td><b>Mã sản phẩm:</b></td>
-					<td><form:input class="panjang" path="productId"/></td>
+					<td><form:input readonly="true"  class="panjang" path="productId"/></td>
 				</tr>
 				<tr>
 					<td><b>Tên sản phẩm:</b></td>
