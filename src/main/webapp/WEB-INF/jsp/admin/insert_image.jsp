@@ -45,9 +45,9 @@
 					<tr>
 					<td><b>Sản phẩm: </b></td>
 					<td >
-						<form:select path="${product}"  class="panjang">
-							<form:option  value="" label="-- Chọn sản phẩm --"/>
-							<form:options items="${listProduct}" itemValue="productId" itemLabel="productName"/>
+						<form:select path="product"  class="panjang">
+							<%-- <form:option  value="" label="-- Chọn sản phẩm --"/> --%>
+							<form:options items="${products}"  itemValue="value"  itemLabel="key"/>
 						</form:select>
 					</td>
 				</tr>

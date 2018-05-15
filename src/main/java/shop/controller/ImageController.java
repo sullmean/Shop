@@ -1,5 +1,10 @@
 package shop.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -9,16 +14,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import shop.entities.Image;
+import shop.entities.Product;
 import shop.service.ImageService;
 import shop.service.ProductService;
 
 @Controller
 @RequestMapping(value = "/admin/manager_image")
 public class ImageController {
-	
+
 	@Autowired
 	ImageService imageService;
-	
+
 	@Autowired
 	ProductService productService;
 
@@ -33,7 +39,19 @@ public class ImageController {
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String insertImage(ModelMap mm) {
 		mm.put("newImage", new Image());
-		mm.put("listProduct", productService.getAllProduct());
+		Set<Map.Entry<String, Long>> products;
+		ArrayList<Product> listProduct = productService.getAllProduct();
+		Map<String, Long> mapProduct = new HashMap<String, Long>();
+		if (listProduct != null && !listProduct.isEmpty()) {
+			for (Product eachDepartment : listProduct) {
+				if (eachDepartment != null) {
+					mapProduct.put(eachDepartment.getProductName(), eachDepartment.getProductId());
+				}
+			}
+		}
+		products = mapProduct.entrySet();
+		mm.put("products", products);
+//		mm.put("listProduct", productService.getAllProduct());
 		return "/admin/insert_image";
 	}
 

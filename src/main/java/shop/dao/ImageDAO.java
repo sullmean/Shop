@@ -7,7 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
+import shop.entities.Category;
 import shop.entities.Image;
+import shop.entities.Product;
 import shop.model.HibernateUtil;
 
 @Repository
@@ -61,5 +63,10 @@ public class ImageDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(new ImageDAO()
+				.insertImage(new Image(7, "abc", new Product(0, "", "áo thun", 234.0, new Category(1, "áo"), "sd"))));
 	}
 }

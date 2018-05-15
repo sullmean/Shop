@@ -14,13 +14,4 @@ public class AdminController {
 		return "/admin/index";
 	}
 
-	@RequestMapping(value = "/manager-bill", method = RequestMethod.GET)
-	public String vieManagerBill() {
-		return "/admin/manager-bill";
-	}
-
-	@RequestMapping(value = "/update_tthoadon", method = RequestMethod.GET)
-	public String update_tthoadon() {
-		return "/admin/update_tthoadon";
-	}
 }

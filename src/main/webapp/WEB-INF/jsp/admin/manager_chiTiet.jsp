@@ -1,13 +1,10 @@
+
 <%
 	request.setCharacterEncoding("utf-8");
 	response.setCharacterEncoding("utf-8");
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%@page import="dao.ChiTietHDDAO"%>
-<%@page import="dao.SanPhamDAO"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="model.ChiTietHD"%> --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,12 +15,6 @@
 <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<%-- <%
-		ChiTietHDDAO chiTietDAO = new ChiTietHDDAO();
-		long mahd = Long.parseLong(request.getParameter("mahd"));
-		ArrayList<ChiTietHD> listChiTiet = chiTietDAO.getListChiTietTheoMaHD(mahd);
-		SanPhamDAO spdao=new SanPhamDAO();
-	%> --%>
 
 	<jsp:include page="header.jsp"></jsp:include>
 
@@ -37,29 +28,23 @@
 			<table class="data">
 				<tr class="data">
 					<th class="data" width="30px">Mã chi tiết</th>
-					<th class="data" width="75px">Mã hóa đơn</th>
-					<th class="data" width="20px">Tên sản phẩm</th>
-					<th class="data" width="20px">Hình</th>
-					<th class="data" width="20px">Giá</th>
+					<th class="data" width="75px">Hóa đơn</th>
+					<th class="data" width="20px">Sản phẩm</th>
 					<th class="data" width="75px">Số lượng</th>
-				</tr>
-				
-				<%-- <%
-					for (ChiTietHD chiTiet : listChiTiet) {
-				%> --%>
-
-				<tr class="data">
-					<td class="data" width="30px"><%-- <%=chiTiet.getMaChiTiet()%> --%></td>
-					<td class="data"><%-- <%=chiTiet.getMaHD()%> --%></td>
-					<td class="data"><%-- <%=spdao.getSanPhamTheoMaSP(chiTiet.getMaSP()).getTenSP()%> --%></td>
-					<td class="data"><img  src="<%-- ${root}/images/<%=spdao.getSanPhamTheoMaSP(chiTiet.getMaSP()).getHinhAnh()%> --%>" width="70px" height="70px"/> </td>
-					<td class="data"><%-- <%=chiTiet.getGia()%> --%></td>
-					<td class="data"><%-- <%=chiTiet.getSoLuong()%> --%></td>
+					<th class="data" width="20px">Tổng giá</th>
 				</tr>
 
-				<%-- <%
-					}
-				%> --%>
+				<c:forEach var="orderDetail" items="${orderDetail}">
+
+					<tr class="data">
+						<td class="data" width="30px">${orderDetail.orderDetailId}</td>
+						<td class="data">${orderDetail.order.getOrderId()}</td>
+						<td class="data">${orderDetail.product.getProductName()}</td>
+						<td class="data">${orderDetail.quanity}</td>
+						<td class="data">${orderDetail.totalPrice}</td>
+					</tr>
+
+				</c:forEach>
 
 			</table>
 		</div>
