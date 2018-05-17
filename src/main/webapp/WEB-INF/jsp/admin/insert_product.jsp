@@ -45,11 +45,7 @@ response.setCharacterEncoding("utf-8");
 						<form:select path="${category}"  class="panjang">
 							<form:option  value="" label="-- Chọn danh mục --"/>
 							<form:options items="${listCategory}" itemValue="categoryId" itemLabel="categoryName"/>
-							<%-- <%
-                            	for(LoaiSP category : listCategory){
-                			%>
-							<option value="<%=category.getMaLoai()%>" ><%=category.getTenLoai()%></option>
-							<%}%> --%>
+							
 						</form:select>
 					</td>
 				</tr>
