@@ -44,7 +44,7 @@ response.setCharacterEncoding("utf-8");
                             <td class="data" width="90px">
                             <center>
                                 <a href="${root}/admin/manager_category/update_category/${category.categoryId}">Sửa</a>&nbsp;&nbsp; | &nbsp;&nbsp;
-                                <a href="<%-- /Shop/ManagerCategoryServlet?command=delete&category_id=<%=category.getMaLoai()%> --%>">Xóa</a>
+                                <a href="${root}/admin/manager_category/delete?id=${category.categoryId}">Xóa</a>
                             </center>
                             </td>
                         </tr>

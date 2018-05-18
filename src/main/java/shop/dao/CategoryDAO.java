@@ -16,7 +16,7 @@ public class CategoryDAO {
 	public ArrayList<Category> getAllcategory() {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();
-		Query query = session.createQuery("from Category");
+		Query query = session.createQuery("from Category c where c.disabled = false");
 		ArrayList<Category> list = (ArrayList<Category>) query.list();
 		transaction.commit();
 		return list;
@@ -66,7 +66,7 @@ public class CategoryDAO {
 	public static void main(String[] args) {
 //		System.out.println(new CategoryDAO().getAllcategory().get(0).getCategoryName());
 //		System.out.println(new CategoryDAO().findCategoryByID(1).getCategoryName());
-		System.out.println(new CategoryDAO().updateCategory(new Category(1,"asdfghhfghji")));
+//		System.out.println(new CategoryDAO().updateCategory(new Category(1,"asdfghhfghji",false)));
 	}
 
 }

@@ -26,35 +26,35 @@ response.setCharacterEncoding("utf-8");
 			<h3>Thêm sản phẩm</h3>
 			<form:form action="save"  method="post" commandName="newProduct">
 			<table width="95%">
+<!-- 				<tr> -->
+<!-- 					<td><b>Mã sản phẩm:</b></td> -->
+<%-- 					<td><form:input class="panjang" path="productId"/></td> --%>
+<!-- 				</tr> -->
 				<tr>
-					<td><b>Mã sản phẩm:</b></td>
-					<td><form:input class="panjang" path="productId"/></td>
-				</tr>
+                     <td></td>
+                     <td style=" color: red"><form:errors path="productId"/></td>
+                </tr>
 				<tr>
 					<td><b>Tên sản phẩm:</b></td>
 					<td><form:input class="panjang" path="productName"/></td>
 				</tr>
-				<%-- <tr>
+				<tr>
                      <td></td>
-                     <td style=" color: red"><%=tensperr%></td>
-                </tr> --%>
+                     <td style=" color: red"><form:errors path="productName"/></td>
+                </tr>
                 
 				<tr>
 					<td><b>Danh mục: </b></td>
 					<td >
-						<form:select path="${category}"  class="panjang">
+						<form:select path="category"  class="panjang">
 							<form:option  value="" label="-- Chọn danh mục --"/>
 							<form:options items="${listCategory}" itemValue="categoryId" itemLabel="categoryName"/>
-							
 						</form:select>
+						<form:errors path="category"></form:errors>
+						</select>
 					</td>
 				</tr>
 				
-				<%-- <tr>
-                     <td></td>
-                     <td style=" color: red"><%=tendanhmucerr%></td>
-                </tr> --%>
-                 
 				<%-- <tr>
 					<td width="125px"><b>Số lượng</b></td>
 					<td><input type="text" class="pendek" name="soluong"></td>
@@ -67,10 +67,10 @@ response.setCharacterEncoding("utf-8");
 					<td><b>Giá</b></td>
 					<td><form:input  class="pendek" path="price"/></td>
 				</tr>
-				<%-- <tr>
+				<tr>
                      <td></td>
-                     <td style=" color: red"><%=giaerr%></td>
-                </tr> --%>
+                     <td style=" color: red"><form:errors path="price"/></td>
+                </tr>
 				<tr>
 					<td><b>Mô tả</b></td>
 					<td>

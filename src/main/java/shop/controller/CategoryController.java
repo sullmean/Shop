@@ -1,12 +1,16 @@
 package shop.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import shop.entities.Category;
 import shop.service.CategoryService;
@@ -33,7 +37,11 @@ public class CategoryController {
 
 	// lưu
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveCategory(ModelMap mm, @ModelAttribute(value = "newCategory") Category category) {
+	public String saveCategory(ModelMap mm, @ModelAttribute(value = "newCategory") @Valid Category category,
+			BindingResult rs) {
+		if (rs.hasErrors()) {
+			return "/admin/insert_category";
+		}
 		categoryService.insertCategory(category);
 		mm.put("listCategory", categoryService.getAllcategory());
 		return "/admin/manager_category";
@@ -50,6 +58,17 @@ public class CategoryController {
 	@RequestMapping(value = "/updateCategory1", method = RequestMethod.POST)
 	public String updateCategory1(ModelMap mm, @ModelAttribute(value = "category") Category category) {
 		categoryService.updateCategory(category);
+		mm.put("listCategory", categoryService.getAllcategory());
+		return "/admin/manager_category";
+	}
+
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String deleteCategory(@RequestParam long id, ModelMap mm) {
+		Category category = categoryService.findCategoryById(id);
+		if(category != null) {
+			category.setDisabled(true);
+			categoryService.updateCategory(category);
+		}
 		mm.put("listCategory", categoryService.getAllcategory());
 		return "/admin/manager_category";
 	}

@@ -66,7 +66,7 @@ public class ImageDAO {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(new ImageDAO()
-				.insertImage(new Image(7, "abc", new Product(0, "", "áo thun", 234.0, new Category(1, "áo"), "sd"))));
+//		System.out.println(new ImageDAO()
+//				.insertImage(new Image(7, "abc", new Product(0, "", "áo thun", 234.0, new Category(1, "áo"), "sd"))));
 	}
 }
