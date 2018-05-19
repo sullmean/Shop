@@ -1,8 +1,3 @@
-
-<%
-	request.setCharacterEncoding("utf-8");
-	response.setCharacterEncoding("utf-8");
-%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -12,7 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Quản lý danh mục</title>
-
 <c:set var="root" value="${pageContext.request.contextPath}" />
 <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 
@@ -22,7 +16,6 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div id="wrapper">
-
 		<jsp:include page="menu.jsp"></jsp:include>
 
 		<div id="rightContent">
@@ -54,11 +47,7 @@
 			</form:form>
 		</div>
 		<div class="clear"></div>
-
 		<jsp:include page="footer.jsp"></jsp:include>
-
 	</div>
-
-
 </body>
 </html>
