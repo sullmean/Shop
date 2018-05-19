@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>Quản lý danh mục</title>
 
 <c:set var="root" value="${pageContext.request.contextPath}" />

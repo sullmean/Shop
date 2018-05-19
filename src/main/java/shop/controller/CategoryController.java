@@ -42,6 +42,7 @@ public class CategoryController {
 		if (rs.hasErrors()) {
 			return "/admin/insert_category";
 		}
+		System.out.println(category.getCategoryName());
 		categoryService.insertCategory(category);
 		mm.put("listCategory", categoryService.getAllcategory());
 		return "/admin/manager_category";
