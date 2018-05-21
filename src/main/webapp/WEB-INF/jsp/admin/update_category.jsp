@@ -26,12 +26,13 @@
 			<h3>Cập nhật danh mục</h3>
 			<form:form action="${root}/admin/manager_category/updateCategory1" method="POST" commandName="category">
 				<table width="95%">
-					<tr>
-						<td style="float: right"><b>Mã danh mục:</b></td>
-						<td>
-							<form:input readonly="true" class="sedang" path="categoryId" />
-						</td>
-					</tr>
+<!-- 					<tr> -->
+<!-- 						<td style="float: right"><b>Mã danh mục:</b></td> -->
+<!-- 						<td> -->
+<%-- 							<form:input readonly="true" class="sedang" path="categoryId" /> --%>
+<!-- 						</td> -->
+<!-- 					</tr> -->
+					<form:hidden path="categoryId"/>
 					<tr>
 						<td style="float: right"><b>Tên danh mục:</b></td>
 						<td>

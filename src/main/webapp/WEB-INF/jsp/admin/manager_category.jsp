@@ -33,6 +33,7 @@ response.setCharacterEncoding("utf-8");
                             <!-- <th class="data" width="30px">STT</th> -->
                             <th class="data">Mã danh mục</th>
                             <th class="data">Tên danh mục</th>
+                            <th class="data">Trạng thái</th>
                             <th class="data" width="90px">Tùy chọn</th>
                         </tr>
                         
@@ -41,6 +42,7 @@ response.setCharacterEncoding("utf-8");
                         <tr class="data">
                             <td class="data">${category.categoryId}</td>
                             <td class="data">${category.categoryName}</td> 
+                            <td class="data">${category.disabled==false?'đang kinh doanh':'không còn kinh doanh'}</td> 
                             <td class="data" width="90px">
                             <center>
                                 <a href="${root}/admin/manager_category/update_category/${category.categoryId}">Sửa</a>&nbsp;&nbsp; | &nbsp;&nbsp;

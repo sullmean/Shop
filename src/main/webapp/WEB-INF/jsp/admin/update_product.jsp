@@ -88,17 +88,17 @@
                      <td></td>
                      <td style=" color: red"><%-- <%=hinhanherr%> --%></td>
                 </tr>
-                <tr>
-					<td><b>Trạng thái: </b></td>
-					<td >
-						<form:select path="productState">
-							<form:option value="" label="-- Chọn trạng thái --"/>
-							<form:option value="Trong kho" label="Trong kho"/>
-							<form:option value="hết hàng" label="Hết hàng"/>
-							<form:option value="không còn kinh doanh" label="không còn kinh doanh"/>
-						</form:select>
-					</td>
-				</tr>
+<!--                 <tr> -->
+<!-- 					<td><b>Trạng thái: </b></td> -->
+<!-- 					<td > -->
+<%-- 						<form:select path="productState"> --%>
+<%-- 							<form:option value="" label="-- Chọn trạng thái --"/> --%>
+<%-- 							<form:option value="Trong kho" label="Trong kho"/> --%>
+<%-- 							<form:option value="hết hàng" label="Hết hàng"/> --%>
+<%-- 							<form:option value="không còn kinh doanh" label="không còn kinh doanh"/> --%>
+<%-- 						</form:select> --%>
+<!-- 					</td> -->
+<!-- 				</tr> -->
 				<tr>
 					<td></td>
 					<td>

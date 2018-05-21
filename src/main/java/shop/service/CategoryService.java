@@ -28,4 +28,8 @@ public class CategoryService {
 	public Category findCategoryById(long categoryId) {
 		return categoryDAO.findCategoryByID(categoryId);
 	}
+
+	public ArrayList<Category> getAllCategoryAdmin() {
+		return categoryDAO.getAllCategoryAdmin();
+	}
 }

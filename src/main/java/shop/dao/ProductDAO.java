@@ -40,7 +40,7 @@ public class ProductDAO {
 	public ArrayList<Product> getAllProduct() {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();
-		Query query = session.createQuery("from Product");
+		Query query = session.createQuery("from Product p where p.productState=false");
 		ArrayList<Product> listProduct = (ArrayList<Product>) query.list();
 		transaction.commit();
 		return listProduct;

@@ -12,7 +12,9 @@ import shop.model.HibernateUtil;
 
 @Repository
 public class CategoryDAO {
+	
 	@SuppressWarnings("unchecked")
+	//getall theo trạng thái chưa xóa
 	public ArrayList<Category> getAllcategory() {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();
@@ -22,6 +24,17 @@ public class CategoryDAO {
 		return list;
 	}
 
+	//getall
+	@SuppressWarnings("unchecked")
+	public ArrayList<Category> getAllCategoryAdmin() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Transaction transaction = session.beginTransaction();
+		Query query = session.createQuery("from Category");
+		ArrayList<Category> list = (ArrayList<Category>) query.list();
+		transaction.commit();
+		return list;
+	}
+	
 	// thêm
 	public boolean insertCategory(Category category) {
 		try {

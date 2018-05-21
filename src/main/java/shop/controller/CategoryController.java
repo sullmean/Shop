@@ -24,7 +24,7 @@ public class CategoryController {
 	// view trang qli danh mục
 	@RequestMapping(method = RequestMethod.GET)
 	public String manage_category(ModelMap mm) {
-		mm.put("listCategory", categoryService.getAllcategory());
+		mm.put("listCategory", categoryService.getAllCategoryAdmin());
 		return "/admin/manager_category";
 	}
 
@@ -42,7 +42,6 @@ public class CategoryController {
 		if (rs.hasErrors()) {
 			return "/admin/insert_category";
 		}
-		System.out.println(category.getCategoryName());
 		categoryService.insertCategory(category);
 		mm.put("listCategory", categoryService.getAllcategory());
 		return "/admin/manager_category";
@@ -63,10 +62,11 @@ public class CategoryController {
 		return "/admin/manager_category";
 	}
 
+	// xóa
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String deleteCategory(@RequestParam long id, ModelMap mm) {
 		Category category = categoryService.findCategoryById(id);
-		if(category != null) {
+		if (category != null) {
 			category.setDisabled(true);
 			categoryService.updateCategory(category);
 		}

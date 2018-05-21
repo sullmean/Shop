@@ -22,14 +22,14 @@
 			<h3>Thông tin danh mục</h3>
 			<form:form action="save" method="POST" commandName="newCategory">
 				<table width="95%">
-					<tr>
-						<td style="float: right"><b>Mã danh mục:</b></td>
-						<td><form:input class="sedang" path="categoryId" /></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td style="color: red"><form:errors path="categoryId" /></td>
-					</tr>
+<!-- 					<tr> -->
+<!-- 						<td style="float: right"><b>Mã danh mục:</b></td> -->
+<%-- 						<td><form:input class="sedang" path="categoryId" /></td> --%>
+<!-- 					</tr> -->
+<!-- 					<tr> -->
+<!-- 						<td></td> -->
+<%-- 						<td style="color: red"><form:errors path="categoryId" /></td> --%>
+<!-- 					</tr> -->
 					<tr>
 						<td style="float: right"><b>Tên danh mục:</b></td>
 						<td><form:input class="sedang" path="categoryName" /></td>

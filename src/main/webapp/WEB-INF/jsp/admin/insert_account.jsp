@@ -27,7 +27,7 @@ response.setCharacterEncoding("utf-8");
 			
 			<form:form action="${pageContext.request.contextPath }/admin/manager_account/save" method="POST" commandName="newUser">
 			<table width="95%">
-				<form:hidden class="panjang" path="userId"/>
+				<form:hidden path="userId"/>
 				<tr>
 					<td><b>Họ tên:</b></td>
 					<td><form:input class="panjang" path="userName"/></td>

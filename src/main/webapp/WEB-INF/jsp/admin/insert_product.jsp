@@ -30,10 +30,10 @@ response.setCharacterEncoding("utf-8");
 <!-- 					<td><b>Mã sản phẩm:</b></td> -->
 <%-- 					<td><form:input class="panjang" path="productId"/></td> --%>
 <!-- 				</tr> -->
-				<tr>
-                     <td></td>
-                     <td style=" color: red"><form:errors path="productId"/></td>
-                </tr>
+<!-- 				<tr> -->
+<!--                      <td></td> -->
+<%--                      <td style=" color: red"><form:errors path="productId"/></td> --%>
+<!--                 </tr> -->
 				<tr>
 					<td><b>Tên sản phẩm:</b></td>
 					<td><form:input class="panjang" path="productName"/></td>
@@ -51,7 +51,6 @@ response.setCharacterEncoding("utf-8");
 							<form:options items="${listCategory}" itemValue="categoryId" itemLabel="categoryName"/>
 						</form:select>
 						<form:errors path="category"></form:errors>
-						</select>
 					</td>
 				</tr>
 				
@@ -94,17 +93,17 @@ response.setCharacterEncoding("utf-8");
                      <td></td>
                      <td style=" color: red"><%-- <%=hinhanherr%> --%></td>
                 </tr>
-                <tr>
-					<td><b>Trạng thái: </b></td>
-					<td >
-						<form:select path="productState">
-							<form:option value="" label="-- Chọn trạng thái --"/>
-							<form:option value="Trong kho" label="Trong kho"/>
-							<form:option value="hết hàng" label="Hết hàng"/>
-							<form:option value="không còn kinh doanh" label="không còn kinh doanh"/>
-						</form:select>
-					</td>
-				</tr>
+<!--                 <tr> -->
+<!-- 					<td><b>Trạng thái: </b></td> -->
+<!-- 					<td > -->
+<%-- 						<form:select path="productState"> --%>
+<%-- 							<form:option value="" label="-- Chọn trạng thái --"/> --%>
+<%-- 							<form:option value="Trong kho" label="Trong kho"/> --%>
+<%-- 							<form:option value="hết hàng" label="Hết hàng"/> --%>
+<%-- 							<form:option value="không còn kinh doanh" label="không còn kinh doanh"/> --%>
+<%-- 						</form:select> --%>
+<!-- 					</td> -->
+<!-- 				</tr> -->
 				<tr>
 					<td></td>
 					<td>

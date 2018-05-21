@@ -1,6 +1,7 @@
+
 <%
-request.setCharacterEncoding("utf-8");
-response.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("utf-8");
+	response.setCharacterEncoding("utf-8");
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -23,10 +24,10 @@ response.setCharacterEncoding("utf-8");
 
 		<div id="rightContent">
 			<h3>Quản lí sản phẩm</h3>
-			
-			<br/>
-			<a href="${root}/admin/manager_product/insert_product" class="button">Thêm sản phẩm</a>
-			
+
+			<br /> <a href="${root}/admin/manager_product/insert_product"
+				class="button">Thêm sản phẩm</a>
+
 			<table class="data">
 				<tr class="data">
 					<th class="data" width="50px">MSP</th>
@@ -38,27 +39,31 @@ response.setCharacterEncoding("utf-8");
 					<th class="data">Trạng thái</th>
 					<th class="data" width="90px">Tùy chọn</th>
 				</tr>
-				
+
 				<c:forEach var="product" items="${listProduct}">
-				
-				<tr class="data"> 
-					<td class="data">${product.productId}</td>
-					<td class="data">${product.productName}</td>
-					<td class="data">${product.category.getCategoryId()}</td>
-					<td class="data">${product.price }</td>
-					<td class="data">${product.decription }</td>
-					<td class="data"><img src="<%-- ${root}/images/<%=sp.getHinhAnh()%>" alt="${root}/images/<%=sp.getHinhAnh()%> --%>" width="70px" height="70px"/></td> 
-					<td class="data">${product.productState }</td>
-					<td class="data">
-						<center>
-							<a href="${root}/admin/manager_product/update_product/${product.productId}">Sửa</a>&nbsp; | &nbsp;&nbsp;
-							<a href="<%-- ${root}/admin/delete_product.jsp?command=delete&masp=<%=sp.getMaSP()%> --%>">Xóa</a>
-						</center>
-					</td>
-				</tr>
-				
+
+					<tr class="data">
+						<td class="data">${product.productId}</td>
+						<td class="data">${product.productName}</td>
+						<td class="data">${product.category.getCategoryName()}</td>
+						<td class="data">${product.price }</td>
+						<td class="data">${product.decription }</td>
+						<td class="data"><img
+							src="<%-- ${root}/images/<%=sp.getHinhAnh()%>" alt="${root}/images/<%=sp.getHinhAnh()%> --%>"
+							width="70px" height="70px" /></td>
+						<td class="data">${product.productState==false?'đang bán':'không còn bán'}</td>
+						<td class="data">
+							<center>
+								<a
+									href="${root}/admin/manager_product/update_product/${product.productId}">Sửa</a>&nbsp;
+								| &nbsp;&nbsp; <a
+									href="<%-- ${root}/admin/delete_product.jsp?command=delete&masp=<%=sp.getMaSP()%> --%>">Xóa</a>
+							</center>
+						</td>
+					</tr>
+
 				</c:forEach>
-				
+
 			</table>
 		</div>
 		<div class="clear"></div>
