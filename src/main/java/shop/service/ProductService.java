@@ -43,4 +43,8 @@ public class ProductService {
 		return productDAO.updateProduct(product);
 
 	}
+
+	public ArrayList<Product> getAllProductAdmin() {
+		return productDAO.getAllProductAdmin();
+	}
 }

@@ -17,7 +17,7 @@ public class ProductDAO {
 	public ArrayList<Product> getProductByCategoryID(long category) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();
-		Query query = session.createQuery("from Product where category = :category");
+		Query query = session.createQuery("from Product p where p.category = :category and p.productState=false");
 		query.setLong("category", category);
 		ArrayList<Product> list = (ArrayList<Product>) query.list();
 		transaction.commit();
@@ -36,11 +36,23 @@ public class ProductDAO {
 		return list;
 	}
 
+	//getall sp mà trạng thái chưa bị xóa
 	@SuppressWarnings("unchecked")
 	public ArrayList<Product> getAllProduct() {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();
 		Query query = session.createQuery("from Product p where p.productState=false");
+		ArrayList<Product> listProduct = (ArrayList<Product>) query.list();
+		transaction.commit();
+		return listProduct;
+	}
+	
+	//getall sp
+	@SuppressWarnings("unchecked")
+	public ArrayList<Product> getAllProductAdmin() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Transaction transaction = session.beginTransaction();
+		Query query = session.createQuery("from Product");
 		ArrayList<Product> listProduct = (ArrayList<Product>) query.list();
 		transaction.commit();
 		return listProduct;

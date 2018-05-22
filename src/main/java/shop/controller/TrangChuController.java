@@ -24,7 +24,7 @@ public class TrangChuController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String vieTrangChu(ModelMap modelMap) {
 		modelMap.put("listCategory", categoryService.getAllcategory());
-		modelMap.put("listProduct", productService.getProductRandom());
+		modelMap.put("listProduct", productService.getAllProduct());
 		return "index";
 	}
 

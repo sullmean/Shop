@@ -43,7 +43,7 @@ public class CategoryController {
 			return "/admin/insert_category";
 		}
 		categoryService.insertCategory(category);
-		mm.put("listCategory", categoryService.getAllcategory());
+		mm.put("listCategory", categoryService.getAllCategoryAdmin());
 		return "/admin/manager_category";
 	}
 
@@ -58,7 +58,7 @@ public class CategoryController {
 	@RequestMapping(value = "/updateCategory1", method = RequestMethod.POST)
 	public String updateCategory1(ModelMap mm, @ModelAttribute(value = "category") Category category) {
 		categoryService.updateCategory(category);
-		mm.put("listCategory", categoryService.getAllcategory());
+		mm.put("listCategory", categoryService.getAllCategoryAdmin());
 		return "/admin/manager_category";
 	}
 
@@ -70,7 +70,7 @@ public class CategoryController {
 			category.setDisabled(true);
 			categoryService.updateCategory(category);
 		}
-		mm.put("listCategory", categoryService.getAllcategory());
+		mm.put("listCategory", categoryService.getAllCategoryAdmin());
 		return "/admin/manager_category";
 	}
 }

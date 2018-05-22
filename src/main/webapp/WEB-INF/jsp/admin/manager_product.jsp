@@ -57,7 +57,7 @@
 								<a
 									href="${root}/admin/manager_product/update_product/${product.productId}">Sửa</a>&nbsp;
 								| &nbsp;&nbsp; <a
-									href="<%-- ${root}/admin/delete_product.jsp?command=delete&masp=<%=sp.getMaSP()%> --%>">Xóa</a>
+									href="${root}/admin/manager_product/delete_product?id=${product.productId}">Xóa</a>
 							</center>
 						</td>
 					</tr>

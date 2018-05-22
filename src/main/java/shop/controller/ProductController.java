@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import shop.entities.Category;
 import shop.entities.Product;
@@ -48,7 +49,7 @@ public class ProductController {
 	// view trang qli sp
 	@RequestMapping(method = RequestMethod.GET)
 	public String vieManagerProduct(ModelMap mm) {
-		mm.put("listProduct", productService.getAllProduct());
+		mm.put("listProduct", productService.getAllProductAdmin());
 		return "/admin/manager_product";
 	}
 
@@ -68,7 +69,7 @@ public class ProductController {
 			return "/admin/insert_product";
 		}
 		productService.insertProduct(product);
-		mm.put("listProduct", productService.getAllProduct());
+		mm.put("listProduct", productService.getAllProductAdmin());
 		return "/admin/manager_product";
 	}
 
@@ -84,7 +85,19 @@ public class ProductController {
 	@RequestMapping(value = "/updateProduct1", method = RequestMethod.POST)
 	public String updateProduct1(ModelMap mm, @ModelAttribute(value = "product") Product product) {
 		productService.updateProduct(product);
-		mm.put("listProduct", productService.getAllProduct());
+		mm.put("listProduct", productService.getAllProductAdmin());
+		return "/admin/manager_product";
+	}
+
+	// xóa sp
+	@RequestMapping(value = "/delete_product", method = RequestMethod.GET)
+	public String deleteProduct(@RequestParam long id, ModelMap mm) {
+		Product product = productService.findProductById(id);
+		if (product != null) {
+			product.setProductState(true);
+			productService.updateProduct(product);
+		}
+		mm.put("listProduct", productService.getAllProductAdmin());
 		return "/admin/manager_product";
 	}
 
