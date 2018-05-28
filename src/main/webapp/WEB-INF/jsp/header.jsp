@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -52,7 +54,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG</a></li>
+								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG (${fn:length(sessionScope.cart) })</a></li>
 								<li>
 									<c:if test="${not empty sessionScope.user }">
 										<a href="${pageContext.request.contextPath}/account/logout">

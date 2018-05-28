@@ -41,23 +41,21 @@
 				</tr>
 
 				<c:forEach var="product" items="${listProduct}">
-
 					<tr class="data">
 						<td class="data">${product.productId}</td>
 						<td class="data">${product.productName}</td>
 						<td class="data">${product.category.getCategoryName()}</td>
 						<td class="data">${product.price }</td>
 						<td class="data">${product.decription }</td>
-						<td class="data"><img
-							src="<%-- ${root}/images/<%=sp.getHinhAnh()%>" alt="${root}/images/<%=sp.getHinhAnh()%> --%>"
-							width="70px" height="70px" /></td>
+						<td class="data">
+							<img src="${root}/resources/images?url=${product.listImage[0].url }" width="70px" height="70px" />
+						</td>
 						<td class="data">${product.productState==false?'đang bán':'không còn bán'}</td>
 						<td class="data">
 							<center>
-								<a
-									href="${root}/admin/manager_product/update_product/${product.productId}">Sửa</a>&nbsp;
-								| &nbsp;&nbsp; <a
-									href="${root}/admin/manager_product/delete_product?id=${product.productId}">Xóa</a>
+								<a href="${root}/admin/manager_product/update_product/${product.productId}">Sửa</a>&nbsp;
+								| &nbsp;&nbsp; 
+								<a href="${root}/admin/manager_product/delete_product?id=${product.productId}">Xóa</a>
 							</center>
 						</td>
 					</tr>

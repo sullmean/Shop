@@ -12,7 +12,7 @@ import shop.service.UserService;
 
 @Controller
 @RequestMapping(value = "/admin/manager_account")
-public class AdminUserController {
+public class UserControllerAdmin {
 	@Autowired
 	private UserService userService;
 

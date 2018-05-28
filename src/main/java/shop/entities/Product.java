@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,7 +30,7 @@ public class Product implements java.io.Serializable {
 	private long productId;
 	@Column(name = "decription")
 	private String decription;
-	@OneToMany(mappedBy = "product")
+	@OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
 	private List<Image> listImage;
 	@NotEmpty
 	@Column(name = "productName")
@@ -77,7 +78,7 @@ public class Product implements java.io.Serializable {
 		return this.listImage;
 	}
 
-	public void setImageId(List<Image> listImage) {
+	public void setListImage(List<Image> listImage) {
 		this.listImage = listImage;
 	}
 
@@ -111,6 +112,13 @@ public class Product implements java.io.Serializable {
 
 	public void setProductState(boolean productState) {
 		this.productState = productState;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", decription=" + decription + ", listImage=" + listImage
+				+ ", productName=" + productName + ", price=" + price + ", category=" + category + ", productState="
+				+ productState + "]";
 	}
 
 }

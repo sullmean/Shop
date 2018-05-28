@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<!-- Uncomment and your base-package here: <context:component-scan base-package="org.springframework.samples.web"/> -->
 	<context:component-scan base-package="shop"></context:component-scan>
-	<mvc:resources mapping="/resources/**"
-		location="/resources/" cache-period="31556926" />
+	
+	<mvc:resources mapping="/resources/**" location="/resources/"
+		cache-period="31556926" />
 	<mvc:annotation-driven />
 	<context:annotation-config />
-
-	<!-- <bean id="cDAO" class="dao.CategoryDAO" /> -->
-	<!-- <bean id="cService" class="service.CategoryService" /> -->
-	<!-- <bean id="pDAO" class="dao.ProductDAO" /> -->
-	<!-- <bean id="pService" class="service.ProductService" /> -->
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -35,19 +28,11 @@
 		<property name="basename" value="/loi/message" />
 	</bean>
 
-</beans>
-<!-- hibernate -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 
-<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
-	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property> 
-	<property name="url" value="jdbc:mysql://localhost:3306/shop"></property> 
-	<property name="username" value="root"></property> <property name="password" 
-	value=""></property> </bean> <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> 
-	<property name="dataSource" ref="dataSource"></property> <property name="configLocation"> 
-	<value>classpath:hibernate.cfg.xml</value> </property> </bean> end hibernate 
-	<tx:annotation-driven /> <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> 
-	<property name="sessionFactory" ref="sessionFactory" /> </bean> <bean id="hibernateTemplate" 
-	class="org.springframework.orm.hibernate4.HibernateTemplate"> <property name="sessionFactory" 
-	ref="sessionFactory"></property> </bean> <bean id="abstractModel" class="com.proj.model.AbstractModel" 
-	autowire="constructor"> <property name="hibernateTemplate" ref="hibernateTemplate" 
-	/> </bean> <bean id="accountModel" class="com.proj.model.AccountModel" parent="abstractModel"></bean> -->
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="100000" />
+	</bean>
+
+</beans>

@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "orderdetail", catalog = "shop")
-public class Orderdetail implements java.io.Serializable {
+public class OrderDetail implements java.io.Serializable {
 	/**
 	 * 
 	 */
@@ -28,19 +28,19 @@ public class Orderdetail implements java.io.Serializable {
 	@JoinColumn(name = "order")
 	private Order order;
 	@Column(name = "totalPrice", precision = 10)
-	private Float totalPrice;
-	@Column(name = "quanity")
-	private Integer quanity;
+	private Double totalPrice;
+	@Column(name = "quantity")
+	private Integer quantity;
 
-	public Orderdetail() {
+	public OrderDetail() {
 	}
 
-	public Orderdetail(long orderDetailId, Product product, Order order, Float totalPrice, Integer quanity) {
+	public OrderDetail(long orderDetailId, Product product, Order order, Double totalPrice, Integer quantity) {
 		this.orderDetailId = orderDetailId;
 		this.product = product;
 		this.order = order;
 		this.totalPrice = totalPrice;
-		this.quanity = quanity;
+		this.quantity = quantity;
 	}
 
 	public long getOrderDetailId() {
@@ -67,20 +67,20 @@ public class Orderdetail implements java.io.Serializable {
 		this.order = order;
 	}
 
-	public Float getTotalPrice() {
+	public Double getTotalPrice() {
 		return this.totalPrice;
 	}
 
-	public void setTotalPrice(Float totalPrice) {
+	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 
-	public Integer getQuanity() {
-		return this.quanity;
+	public Integer getQuantity() {
+		return this.quantity;
 	}
 
-	public void setQuanity(Integer quanity) {
-		this.quanity = quanity;
+	public void setQuanity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 }

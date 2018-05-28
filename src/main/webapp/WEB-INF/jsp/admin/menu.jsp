@@ -17,7 +17,7 @@ response.setCharacterEncoding("utf-8");
 
 	<div id="leftBar">
 		<ul>
-			<li><a href="${root}/ChartServlet">Trang chủ</a></li>
+			<li><a href="${root}">Trang chủ</a></li>
 			<li><a href="${root}/admin/manager_category">Danh mục</a></li>
 			<li><a href="${root}/admin/manager_product">Sản phẩm</a></li>
 			<li><a href="${root}/admin/manager-bill">Hóa đơn</a></li>

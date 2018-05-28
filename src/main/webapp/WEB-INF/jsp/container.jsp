@@ -19,10 +19,10 @@
 				<div class="product-image-wrapper">
 					<div class="single-products">
 						<div class="productinfo text-center">
-							<a href="${pageContext.request.contextPath}/detail"><img src="${pageContext.request.contextPath}/resources/images/home/51_large.jpg" alt="" /></a>
+							<a href="${pageContext.request.contextPath}/detail"><img src="${pageContext.request.contextPath}/resources/images?url=${item.listImage[0].url }" alt="" /></a>
 							<h2> $ ${item.price} </h2>
 							<a href=""><p> ${item.productName}</p></a>
-							<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+							<a href="${pageContext.request.contextPath}/cart/addCart?productId=${item.productId }" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 						</div>
 					</div>
 				</div>

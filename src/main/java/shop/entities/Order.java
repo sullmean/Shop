@@ -42,7 +42,7 @@ public class Order implements java.io.Serializable {
 	@Column(name = "status")
 	private String status;
 	@OneToMany(mappedBy = "order")
-	private List<Orderdetail> listOrderDetail;
+	private List<OrderDetail> listOrderDetail;
 
 	public Order() {
 	}
@@ -57,7 +57,7 @@ public class Order implements java.io.Serializable {
 		this.payment = payment;
 		this.orderDate = orderDate;
 		this.status = status;
-		this.listOrderDetail = new ArrayList<Orderdetail>();
+		this.listOrderDetail = new ArrayList<OrderDetail>();
 	}
 
 	public long getOrderId() {
@@ -124,11 +124,11 @@ public class Order implements java.io.Serializable {
 		this.status = status;
 	}
 
-	public List<Orderdetail> getListOrderDetail() {
+	public List<OrderDetail> getListOrderDetail() {
 		return listOrderDetail;
 	}
 
-	public void setListOrderDetail(List<Orderdetail> listOrderDetail) {
+	public void setListOrderDetail(List<OrderDetail> listOrderDetail) {
 		this.listOrderDetail = listOrderDetail;
 	}
 }
