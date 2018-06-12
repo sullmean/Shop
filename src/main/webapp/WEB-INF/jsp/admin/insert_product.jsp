@@ -65,8 +65,9 @@
 					</tr>
 					<tr>
 						<td width="125px"><b>Hình ảnh</b></td>
-						<td><input type="file" value="Chọn tệp" class="button"
-							name="files" /></td>
+						<td>
+							<input type="file" value="Chọn tệp" class="button" name="files" />
+						</td>
 					</tr>
 					<tr>
 						<td></td>

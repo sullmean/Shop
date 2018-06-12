@@ -13,7 +13,7 @@ public class UploadFileUtils {
 	public static List<String> uploadFile(List<MultipartFile> multipartFiles) throws IOException {
 		List<String> paths = new ArrayList<>();
 		for(MultipartFile multipartFile: multipartFiles) {
-			File file = new File("/home/baotoan/Temps/" + multipartFile.getOriginalFilename());
+			File file = new File("D:" + File.pathSeparator +"uploads" + File.pathSeparator + multipartFile.getOriginalFilename());
 			FileOutputStream fileOutputStream = new FileOutputStream(file);
 			FileCopyUtils.copy(multipartFile.getBytes(), fileOutputStream);
 			

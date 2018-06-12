@@ -42,11 +42,11 @@ response.setCharacterEncoding("utf-8");
 				
 				<tr class="data">
 						<td class="data" width="30px">${order.orderId}</td>
-                		<td class="data">${order.user}</td>
-                        <td class="data">${order.customerAddress}</td>
+                		<td class="data">${order.user.userEmail}</td>
                         <td class="data">${order.customerPhone}</td>
                         <td class="data">${order.amount}</td>
                         <td class="data">${order.payment}</td>
+                        <td class="data">${order.customerAddress}</td>
                         <td class="data">${order.orderDate}</td>
                 		<td class="data">${order.status}</td>
                         <td class="data" width="75px">
