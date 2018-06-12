@@ -4,6 +4,7 @@ package shop.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -30,7 +31,7 @@ public class Product implements java.io.Serializable {
 	private long productId;
 	@Column(name = "decription")
 	private String decription;
-	@OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Image> listImage;
 	@NotEmpty
 	@Column(name = "productName")

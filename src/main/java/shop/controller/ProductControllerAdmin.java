@@ -85,13 +85,13 @@ public class ProductControllerAdmin {
 	// lưu
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String saveProduct(@ModelAttribute ProductDto newProductDto, ModelMap mm) {
-		System.out.println(newProductDto.getProduct().getCategory());
+		Product product = productService.insertProduct(newProductDto.getProduct());
 		try {
 			List<String> paths = UploadFileUtils.uploadFile(Arrays.asList(newProductDto.getFiles()));
 			if(!paths.isEmpty()) {
 				List<Image> images = new ArrayList<>();
 				paths.forEach(path -> {
-					Image image = new Image(0, path, newProductDto.getProduct());
+					Image image = new Image(0, path, product);
 					imageService.insertImage(image);
 					images.add(image);
 				});
@@ -100,7 +100,6 @@ public class ProductControllerAdmin {
 			e.printStackTrace();
 		}
 		
-		productService.insertProduct(newProductDto.getProduct());
 		mm.put("listProduct", productService.getAllProductAdmin());
 		return "/admin/manager_product";
 	}

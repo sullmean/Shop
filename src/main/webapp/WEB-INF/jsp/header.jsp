@@ -54,12 +54,15 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG (${fn:length(sessionScope.cart) })</a></li>
+								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG (${fn:length(sessionScope.cart.listOrderDetail) })</a></li>
 								<li>
 									<c:if test="${not empty sessionScope.user }">
 										<a href="${pageContext.request.contextPath}/account/logout">
 										Đăng Xuất
 										</a>
+										<c:if test="${sessionScope.user.role eq 'admin' }">
+										<a href="${pageContext.request.contextPath}/admin">Admin</a>
+										</c:if>
 									</c:if>
 									<c:if test="${empty sessionScope.user }">
 									<a href="${pageContext.request.contextPath}/account" class="active">

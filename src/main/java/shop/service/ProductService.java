@@ -29,7 +29,7 @@ public class ProductService {
 	}
 
 	// thêm
-	public boolean insertProduct(Product product) {
+	public Product insertProduct(Product product) {
 		return productDAO.insertProduct(product);
 	}
 

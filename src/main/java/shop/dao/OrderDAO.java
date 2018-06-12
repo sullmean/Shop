@@ -25,8 +25,8 @@ public class OrderDAO {
 
 	// sửa
 	public boolean updateOrder(Order order) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			Transaction transaction = session.beginTransaction();
 			session.update(order);
 			transaction.commit();
@@ -38,8 +38,8 @@ public class OrderDAO {
 	}
 
 	public Order findOrderByID(long orderId) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			Transaction transaction = session.beginTransaction();
 			Order order = (Order) session.get(Order.class, orderId);
 			transaction.commit();
@@ -48,5 +48,18 @@ public class OrderDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public boolean save(Order order) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		try {
+			Transaction transaction = session.beginTransaction();
+			session.save(order);
+			transaction.commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }

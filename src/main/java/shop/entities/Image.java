@@ -3,6 +3,8 @@ package shop.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -20,6 +22,7 @@ public class Image implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "imageID", unique = true, nullable = false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long imageId;
 	@Column(name = "url")
 	private String url;

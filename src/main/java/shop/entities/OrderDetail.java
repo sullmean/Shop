@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "orderdetail", catalog = "shop")
+@Table(name = "orderdetail")
 public class OrderDetail implements java.io.Serializable {
 	/**
 	 * 
@@ -28,14 +28,14 @@ public class OrderDetail implements java.io.Serializable {
 	@JoinColumn(name = "order")
 	private Order order;
 	@Column(name = "totalPrice", precision = 10)
-	private Double totalPrice;
+	private double totalPrice;
 	@Column(name = "quantity")
-	private Integer quantity;
+	private int quantity;
 
 	public OrderDetail() {
 	}
 
-	public OrderDetail(long orderDetailId, Product product, Order order, Double totalPrice, Integer quantity) {
+	public OrderDetail(long orderDetailId, Product product, Order order, double totalPrice, int quantity) {
 		this.orderDetailId = orderDetailId;
 		this.product = product;
 		this.order = order;
@@ -67,19 +67,19 @@ public class OrderDetail implements java.io.Serializable {
 		this.order = order;
 	}
 
-	public Double getTotalPrice() {
+	public double getTotalPrice() {
 		return this.totalPrice;
 	}
 
-	public void setTotalPrice(Double totalPrice) {
+	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 
-	public Integer getQuantity() {
+	public int getQuantity() {
 		return this.quantity;
 	}
 
-	public void setQuanity(Integer quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 

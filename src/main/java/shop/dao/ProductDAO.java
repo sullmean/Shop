@@ -59,23 +59,23 @@ public class ProductDAO {
 	}
 
 	// thêm
-	public boolean insertProduct(Product product) {
+	public Product insertProduct(Product product) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			Transaction transaction = session.beginTransaction();
 			session.save(product);
 			transaction.commit();
-			return true;
+			return product;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return false;
+		return null;
 	}
 
 	// sửa
 	public boolean updateProduct(Product product) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			Transaction transaction = session.beginTransaction();
 			session.update(product);
 			transaction.commit();
@@ -87,8 +87,8 @@ public class ProductDAO {
 	}
 
 	public Product findProductByID(long productId) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			Transaction transaction = session.beginTransaction();
 			Product product = (Product) session.get(Product.class, productId);
 			transaction.commit();
@@ -97,11 +97,5 @@ public class ProductDAO {
 			e.printStackTrace();
 		}
 		return null;
-	}
-
-	public static void main(String[] args) {
-//		System.out.println(new ProductDAO().getProductByCategoryID(2).size());
-//		System.out.println(new ProductDAO().getAllProduct().size());
-		System.out.println(new ProductDAO().findProductByID(1).getProductName());
 	}
 }

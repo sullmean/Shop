@@ -25,4 +25,8 @@ public class OrderService {
 	public Order findOrderById(long orderId) {
 		return orderDAO.findOrderByID(orderId);
 	}
+	
+	public boolean save(Order order) {
+		return orderDAO.save(order);
+	}
 }

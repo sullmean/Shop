@@ -33,7 +33,7 @@ public class Order implements java.io.Serializable {
 	@Column(name = "customerPhone")
 	private String customerPhone;
 	@Column(name = "amount", precision = 255, scale = 0)
-	private Float amount;
+	private double amount;
 	@Column(name = "payment")
 	private String payment;
 	@Temporal(TemporalType.TIMESTAMP)
@@ -45,6 +45,7 @@ public class Order implements java.io.Serializable {
 	private List<OrderDetail> listOrderDetail;
 
 	public Order() {
+		this.listOrderDetail = new ArrayList<>();
 	}
 
 	public Order(long orderId, User user, String customerAddress, String customerPhone, Float amount, String payment,
@@ -92,11 +93,11 @@ public class Order implements java.io.Serializable {
 		this.customerPhone = customerPhone;
 	}
 
-	public Float getAmount() {
+	public double getAmount() {
 		return this.amount;
 	}
 
-	public void setAmount(Float amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 
