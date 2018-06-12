@@ -30,7 +30,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="${pageContext.request.contextPath}/resources/images/shop/ao_hoa_beo_vang__ayv50-2_149k_-_quan_-_syv40_139k___1__large.jpg" alt="" />
+										<a href="${pageContext.request.contextPath}/detail"><img src="${pageContext.request.contextPath}/resources/images?url=${item.listImage[0].url }" alt="" /></a>
 										<h2> $ ${item.price} </h2>
 										<p> ${item.productName}</p>
 										<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
