@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>Shop</display-name>
-
+<!-- 	<listener> -->
+<!-- 	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> -->
+<!-- 	</listener> -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -36,17 +38,24 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+<!-- 	<context-param> -->
+<!-- 	    <param-name>contextConfigLocation</param-name> -->
+<!-- 	    <param-value> -->
+<!-- 	        /WEB-INF/security-context.xml, -->
+<!-- 	        /WEB-INF/spring-database.xml -->
+<!-- 	    </param-value> -->
+<!-- 	</context-param> -->
 <!-- 	default error page -->
-	<error-page>
-		<error-code>404</error-code>
-		<location>/error.jsp</location>
-	</error-page>
-	<error-page>
-		<error-code>400</error-code>
-		<location>/error.jsp</location>
-	</error-page>
-	<error-page>
-		<error-code>500</error-code>
-		<location>/error.jsp</location>
-	</error-page>
+<!-- 	<error-page> -->
+<!-- 		<error-code>404</error-code> -->
+<!-- 		<location>/error.jsp</location> -->
+<!-- 	</error-page> -->
+<!-- 	<error-page> -->
+<!-- 		<error-code>400</error-code> -->
+<!-- 		<location>/error.jsp</location> -->
+<!-- 	</error-page> -->
+<!-- 	<error-page> -->
+<!-- 		<error-code>500</error-code> -->
+<!-- 		<location>/error.jsp</location> -->
+<!-- 	</error-page> -->
 </web-app>

@@ -19,7 +19,7 @@
 					<!--login form-->
 					<h2>ĐĂNG NHẬP</h2>
 					${error }
-					<form:form action="${pageContext.request.contextPath }/account/login" modelAttribute ="user" method= "post">
+					<form:form action="${pageContext.request.contextPath }/account/login" modelAttribute ="user"  method= "post">
 						<form:input path= "userEmail" placeholder="Email" /> 
 						<form:password path= "userPass" placeholder="PassWord" /> <span> 
 						<input type="checkbox" class="checkbox"> Lưu đăng nhập
@@ -27,6 +27,9 @@
 						<button type="submit" class="btn btn-default">ĐĂNG NHẬP</button>
 						<a href=""><p>Quên mật khẩu</p></a>
 					</form:form>
+					<%-- <font color="red">
+						<span>${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</span>
+					</font> --%>
 				</div>
 				<!--/login form-->
 			</div>

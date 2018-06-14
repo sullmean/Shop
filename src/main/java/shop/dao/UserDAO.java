@@ -40,6 +40,8 @@ public class UserDAO {
 		return false;
 	}
 
+	// login
+	@SuppressWarnings("unchecked")
 	public User getUser(String email, String password) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction transaction = session.beginTransaction();

@@ -1,4 +1,3 @@
-
 <%
 	request.setCharacterEncoding("utf-8");
 	response.setCharacterEncoding("utf-8");
@@ -12,7 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>quản lí chi tiết đơn hàng</title>
 <c:set var="root" value="${pageContext.request.contextPath}" />
-<link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
 
@@ -24,16 +22,18 @@
 
 		<div id="rightContent">
 			<h3>Xem chi tiết đơn hàng</h3>
-
-			<table class="data">
-				<tr class="data">
-					<th class="data" width="30px">Mã chi tiết</th>
-					<th class="data" width="75px">Hóa đơn</th>
-					<th class="data" width="20px">Sản phẩm</th>
-					<th class="data" width="75px">Số lượng</th>
-					<th class="data" width="20px">Tổng giá</th>
-				</tr>
-
+			<br/>
+			<table class="data" id="datatable-buttons">
+				<thead>
+					<tr class="data">
+						<th class="data" width="30px">Mã chi tiết</th>
+						<th class="data" width="75px">Hóa đơn</th>
+						<th class="data" width="20px">Sản phẩm</th>
+						<th class="data" width="75px">Số lượng</th>
+						<th class="data" width="20px">Tổng giá</th>
+					</tr>
+				<thead>
+				<tbody>
 				<c:forEach var="orderDetail" items="${orderDetail}">
 
 					<tr class="data">
@@ -45,7 +45,7 @@
 					</tr>
 
 				</c:forEach>
-
+				</tbody>
 			</table>
 		</div>
 		<div class="clear"></div>

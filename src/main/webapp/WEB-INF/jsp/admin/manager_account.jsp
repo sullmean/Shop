@@ -11,7 +11,6 @@ response.setCharacterEncoding("utf-8");
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>quản lí sp</title>
 <c:set var="root" value="${pageContext.request.contextPath}" />
-<link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
 
@@ -26,18 +25,20 @@ response.setCharacterEncoding("utf-8");
 			
 			<br/>
 			<a href="${root}/admin/manager_account/add" class="button">Thêm tài khoản</a>
-			
-			<table class="data">
-				<tr class="data">
-					<th class="data"  width="10px">Mã TK</th>
-					<th class="data" width="100px">Họ tên</th>
-					<th class="data" >Email</th>
-					<th class="data" >Địa chỉ</th>
-					<th class="data" width="100px">Phone</th>
-					<th class="data"  width="70px">Quyền hạn</th>
-					<th class="data" width="40px">Trạng thái</th>
-				</tr>
-				
+			<br/>
+			<table class="data" id="datatable-buttons">
+				<thead>
+					<tr class="data">
+						<th class="data"  width="10px">Mã TK</th>
+						<th class="data" width="100px">Họ tên</th>
+						<th class="data" >Email</th>
+						<th class="data" >Địa chỉ</th>
+						<th class="data" width="100px">Phone</th>
+						<th class="data"  width="70px">Quyền hạn</th>
+						<th class="data" width="40px">Trạng thái</th>
+					</tr>
+				</thead>
+				<tbody>
 				<c:forEach var="user" items="${listUser}">
 				
 				<tr class="data"> 
@@ -51,7 +52,7 @@ response.setCharacterEncoding("utf-8");
 				</tr>
 				
 				</c:forEach>
-				
+				</tbody>
 			</table>
 		</div>
 		<div class="clear"></div>

@@ -11,8 +11,6 @@ response.setCharacterEncoding("utf-8");
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Quản lý hình ảnh</title>
         <c:set var="root" value="${pageContext.request.contextPath}"/>
-        <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
-
     </head>
     <body>
 		
@@ -26,23 +24,24 @@ response.setCharacterEncoding("utf-8");
                     <h3>Quản lý hình ảnh</h3>
                     
                     <br/>
-                    <a href="${root}/admin/manager_image/add" class="button">Thêm hình ảnh</a>
-                    <table class="data">
-
-                        <tr class="data">
-                            <!-- <th class="data" width="30px">STT</th> -->
-                            <th class="data">Mã hình</th>
-                            <th class="data">Hình</th>
-                            <th class="data">Sản phẩm</th>
-                            <th class="data" width="90px">Tùy chọn</th>
-                        </tr>
-                        
+                    <a href="${root}/admin/manager_image/add" class="button">Thêm hình ảnh</a><br/>
+                    <table class="data" id="datatable-buttons">
+						<thead>
+	                        <tr class="data">
+	                            <!-- <th class="data" width="30px">STT</th> -->
+	                            <th class="data">Mã hình</th>
+	                            <th class="data">Hình</th>
+	                            <th class="data">Sản phẩm</th>
+	                            <th class="data" width="90px">Tùy chọn</th>
+	                        </tr>
+                        </thead>
+                        <tbody>
 						<c:forEach var="img" items="${listImage}">
                         
                         <tr class="data">
                             <td class="data">${img.imageId}</td>
                             <td class="data">
-                            	<img src="${root}/resources/images/${img.url}" alt="">
+                            	<img src="${root}/resources/images?url=${img.url}" alt="" width="70px" height="70px">
                             </td> 
                             <td class="data">${img.product.getProductName()}</td>
                             <td class="data" width="90px">
@@ -53,7 +52,7 @@ response.setCharacterEncoding("utf-8");
                             </td>
                         </tr>
                        	</c:forEach>
-
+						</tbody>
                     </table>
                 </div>
                 <div class="clear"></div>

@@ -2,8 +2,7 @@
 request.setCharacterEncoding("utf-8");
 response.setCharacterEncoding("utf-8");
 %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -11,8 +10,6 @@ response.setCharacterEncoding("utf-8");
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Quản lý danh mục</title>
         <c:set var="root" value="${pageContext.request.contextPath}"/>
-        <link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
-
     </head>
     <body>
 		
@@ -26,9 +23,9 @@ response.setCharacterEncoding("utf-8");
                     <h3>Quản lý danh mục</h3>
                     
                     <br/>
-                    <a href="${root}/admin/manager_category/add" class="button">Thêm danh mục</a>
-                    <table class="data">
-
+                    <a href="${root}/admin/manager_category/add" class="button">Thêm danh mục</a><br/>
+                    <table class="data" id="datatable-buttons">
+                    	<thead>
                         <tr class="data">
                             <!-- <th class="data" width="30px">STT</th> -->
                             <th class="data">Mã danh mục</th>
@@ -36,7 +33,8 @@ response.setCharacterEncoding("utf-8");
                             <th class="data">Trạng thái</th>
                             <th class="data" width="90px">Tùy chọn</th>
                         </tr>
-                        
+                        </thead>
+                        <tbody>
 						<c:forEach var="category" items="${listCategory}">
                         
                         <tr class="data">
@@ -51,7 +49,8 @@ response.setCharacterEncoding("utf-8");
                             </td>
                         </tr>
                        	</c:forEach>
-
+						</tbody>
+						
                     </table>
                 </div>
                 <div class="clear"></div>

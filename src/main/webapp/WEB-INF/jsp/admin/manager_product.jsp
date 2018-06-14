@@ -1,4 +1,3 @@
-
 <%
 	request.setCharacterEncoding("utf-8");
 	response.setCharacterEncoding("utf-8");
@@ -12,7 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>quản lí sp</title>
 <c:set var="root" value="${pageContext.request.contextPath}" />
-<link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
 
@@ -25,10 +23,10 @@
 		<div id="rightContent">
 			<h3>Quản lí sản phẩm</h3>
 
-			<br /> <a href="${root}/admin/manager_product/insert_product"
-				class="button">Thêm sản phẩm</a>
+			<br /> <a href="${root}/admin/manager_product/insert_product" class="button">Thêm sản phẩm</a><br/>
 
-			<table class="data">
+			<table class="data" id="datatable-buttons">
+				<thead>
 				<tr class="data">
 					<th class="data" width="50px">MSP</th>
 					<th class="data" width="75px">Tên SP</th>
@@ -39,7 +37,8 @@
 					<th class="data">Trạng thái</th>
 					<th class="data" width="90px">Tùy chọn</th>
 				</tr>
-
+				</thead>
+				<tbody>
 				<c:forEach var="product" items="${listProduct}">
 					<tr class="data">
 						<td class="data">${product.productId}</td>
@@ -61,7 +60,7 @@
 					</tr>
 
 				</c:forEach>
-
+				</tbody>
 			</table>
 		</div>
 		<div class="clear"></div>

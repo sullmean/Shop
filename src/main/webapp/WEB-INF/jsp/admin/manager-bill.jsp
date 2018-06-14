@@ -12,7 +12,6 @@ response.setCharacterEncoding("utf-8");
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>quản lí đơn hàng</title>
 <c:set var="root" value="${pageContext.request.contextPath}" />
-<link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
 
@@ -24,20 +23,22 @@ response.setCharacterEncoding("utf-8");
 
 		<div id="rightContent">
 			<h3>quản lí đơn hàng</h3>
-
-			<table class="data">
-				<tr class="data">
-					<th class="data" width="30px">Mã hóa đơn</th>
-					<th class="data" >User</th>
-					<th class="data" >SĐT</th>
-					<th class="data" >Tổng tiền</th>
-					<th class="data" width="80px">Phương thức thanh toán</th>
-					<th class="data" width="100px">Địa chỉ giao hàng</th>
-					<th class="data" width="100px">Thời gian đặt hàng</th>
-					<th class="data" width="65px">trạng thái</th>
-					<th class="data" width="60px">Tùy Chọn</th>
-				</tr>
-				
+			<br/>
+			<table class="data" id="datatable-buttons">
+				<thead>
+					<tr class="data">
+						<th class="data" width="30px">Mã hóa đơn</th>
+						<th class="data" >User</th>
+						<th class="data" >SĐT</th>
+						<th class="data" >Tổng tiền</th>
+						<th class="data" width="80px">Phương thức thanh toán</th>
+						<th class="data" width="100px">Địa chỉ giao hàng</th>
+						<th class="data" width="100px">Thời gian đặt hàng</th>
+						<th class="data" width="65px">trạng thái</th>
+						<th class="data" width="60px">Tùy Chọn</th>
+					</tr>
+				</thead>
+				<tbody>
 				<c:forEach var="order" items="${listOrder}">
 				
 				<tr class="data">
@@ -58,7 +59,7 @@ response.setCharacterEncoding("utf-8");
                  </tr>
                  
                 </c:forEach>
-                 
+                 </tbody>
 			</table>
 		</div>
 		<div class="clear"></div>

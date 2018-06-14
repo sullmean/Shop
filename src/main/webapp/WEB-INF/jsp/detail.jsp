@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,9 +20,7 @@
 					<!--product-details-->
 					<div class="col-sm-5">
 						<div class="view-product">
-							<a href=""><img
-								src="${pageContext.request.contextPath}/resources/images/product-details/dam_do_beo_tay_dai_-_dk275__189k___2__large.jpg"
-								alt=""></a>
+							<a href=""><img src="${pageContext.request.contextPath}/resources/images?url=${product.getListImage().get(0).url}" alt=""></a>
 						</div>
 						<div id="similar-product" class="carousel slide"
 							data-ride="carousel">
@@ -80,23 +79,19 @@
 					<div class="col-sm-7">
 						<div class="product-information">
 							<!--/product-information-->
-							<a href=""><img
-								src="${pageContext.request.contextPath}/resources/images/product-details/new.jpg"
-								class="newarrival" alt="" /></a>
-							<h2>ĐẦM ĐỎ BÈO TAY DÀI</h2>
-							
-							<img
-								src="${pageContext.request.contextPath}/resources/images/product-details/rating.png"
-								alt="" /> <span> <span>145.000VND</span> <label>Số Lượng:</label>
-								<input type="text" value="3" />
-								<a href="${pageContext.request.contextPath}/cart" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+							<a href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/new.jpg" class="newarrival" alt="" /></a>
+							<h2>${product.productName}</h2>
+							<%-- <img src="${pageContext.request.contextPath}/resources/images/product-details/rating.png" alt="" />  --%>
+							<span>
+								<span>${product.price} VNĐ</span> <!-- <label>Số Lượng:</label>
+								<input type="text" value="3" /> -->
+								<a href="${pageContext.request.contextPath}/cart" class="btn btn-fefault cart">
+									<i class="fa fa-shopping-cart"></i>
+									Mua
+								</a>
 							</span>
-							<p>
-								<b>Hàng:</b> Mới
-							</p>
-							<a href=""><img
-								src="${pageContext.request.contextPath}/resources/images/product-details/share.png"
-								class="share img-responsive" alt="" /></a>
+							<p><b>Hàng:</b> Mới</p>
+							<a href=""><img src="${pageContext.request.contextPath}/resources/images/product-details/share.png" class="share img-responsive" alt="" /></a>
 						</div>
 						<!--/product-information-->
 					</div>
@@ -315,16 +310,12 @@
 
 						<div class="tab-pane fade active in" id="reviews">
 							<div class="col-sm-12">
-								<ul>
-									<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-									<li><a href=""><i class="fa fa-calendar-o"></i>5 MAY 5
-											2014</a></li>
-								</ul>
-								<p>: Nữ tính và thanh lịch với mẫu áo bèo xanh đến từ
-									Valanno. Với chất liệu phi bóng mềm mịn thấm hút tốt giúp người
-									mặc cảm thấy thoải mái khi diện. Thiết kế phần vạt bèo ngực với
-									phần tay loe mang lại sự trẻ trung nhưng không kém phần thời
-									trang.</p>
+<!-- 								<ul> -->
+<!-- 									<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li> -->
+<!-- 									<li><a href=""><i class="fa fa-calendar-o"></i>5 MAY 5 -->
+<!-- 											2014</a></li> -->
+<!-- 								</ul> -->
+								<p>${product.decription}</p>
 
 							</div>
 						</div>
@@ -439,7 +430,7 @@
 					</div>
 				</div>
 				<!--/recommended_items-->
-
+				<div class="fb-comments" data-href="http://localhost:8080/Shop/detail?productId=${product.productId}" data-width="850" data-numposts="5"></div>
 			</div>
 
 		</div>

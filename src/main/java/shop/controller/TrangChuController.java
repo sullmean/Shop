@@ -37,7 +37,9 @@ public class TrangChuController {
 	}
 
 	@RequestMapping(value = "/detail")
-	public String vieDetail() {
+	public String viewDetail(ModelMap mm, @RequestParam(value = "productId") long productId) {
+		mm.put("product", productService.findProductById(productId));
+		mm.put("listCategory", categoryService.getAllcategory());
 		return "detail";
 	}
 

@@ -2,12 +2,20 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
+<%-- <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>header</title>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=140675323287238&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </head>
 <body>
 
@@ -54,7 +62,18 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
+<%-- 							<c:if test="${pageContext.request.userPrincipal.name != null}"> --%>
+<%--   								<li>Xin chào: ${pageContext.request.userPrincipal.name}</li> --%>
+<!--   								| &nbsp; -->
+<%-- 							     <a href="${pageContext.request.contextPath}/logout">Logout</a> --%>
+<!-- 								<sec:authorize  access="hasRole('ROLE_ADMIN')" > 	authorize: cho phép; authentication: xác thực; authorities: quyền; access: truy cập -->
+<%-- 									<li><a href="${pageContext.request.contextPath}/admin"><i class="fa fa-shopping-cart"></i>Admin</a></li> --%>
+<!-- 								</sec:authorize> -->
+							     
+						     
+<%-- 						  	</c:if> --%>
 								<li><a href="${pageContext.request.contextPath}/cart"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG (${fn:length(sessionScope.cart.listOrderDetail) })</a></li>
+								
 								<li>
 									<c:if test="${not empty sessionScope.user }">
 										<a href="${pageContext.request.contextPath}/account/logout">
@@ -77,6 +96,7 @@
 									</a>
 								</li>
 								</c:if>
+								
 							</ul>
 						</div>
 					</div>

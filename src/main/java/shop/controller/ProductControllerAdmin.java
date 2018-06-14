@@ -68,9 +68,6 @@ public class ProductControllerAdmin {
 	@RequestMapping(method = RequestMethod.GET)
 	public String vieManagerProduct(ModelMap mm) {
 		mm.put("listProduct", productService.getAllProductAdmin());
-		for(Product p : productService.getAllProductAdmin()) {
-			System.out.println(p.getListImage().size());
-		}
 		return "/admin/manager_product";
 	}
 
@@ -131,5 +128,5 @@ public class ProductControllerAdmin {
 		mm.put("listProduct", productService.getAllProductAdmin());
 		return "/admin/manager_product";
 	}
-
+	
 }
